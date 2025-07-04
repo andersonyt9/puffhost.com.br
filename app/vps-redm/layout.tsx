@@ -21,14 +21,6 @@ export const metadata: Metadata = {
     description:
       "Servidores VPS especializados em RedM para roleplay no Velho Oeste com scripts premium e suporte 24/7.",
     url: "https://puffhost.com.br/vps-redm",
-    images: [
-      {
-        url: "/og-vps-redm.jpg",
-        width: 1200,
-        height: 630,
-        alt: "VPS RedM PuffHost",
-      },
-    ],
   },
   alternates: {
     canonical: "/vps-redm",
