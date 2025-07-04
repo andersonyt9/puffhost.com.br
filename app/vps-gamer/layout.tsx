@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "https://puffhost.com.br/vps-gamer",
     images: [
       {
-        url: "/",
+        url: "/banner.png",
         width: 1200,
         height: 630,
         alt: "VPS Gamer PuffHost",
