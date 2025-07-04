@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "VPS Gamer - Servidores Otimizados para Jogos",
     description:
-      "Servidores VPS especializados em gaming com AMD Ryzen, Anti-DDoS e suporte 24/7. Ideal para Minecraft, FiveM, Rust e mais.",
+      "Servidores VPS especializados para games com AMD Ryzen, Anti-DDoS avançado e suporte 24/7. Perfeitos para FiveM, Minecraft, Rust e muito mais.",
     url: "https://puffhost.com.br/vps-gamer",
     images: [
       {
-        url: "/og-vps-gamer.jpg",
+        url: "/banner.png",
         width: 1200,
         height: 630,
         alt: "VPS Gamer PuffHost",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "VPS Gamer - Servidores para Jogos | PuffHost",
-    description: "Servidores VPS otimizados para gaming com performance máxima e suporte especializado.",
+    description: "Servidores VPS otimizados para games com performance máxima, Anti-DDoS e suporte 24/7.",
   },
   alternates: {
     canonical: "/vps-gamer",
