@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 		title: "Hospedagem de Jogos no Brasil | PuffHost",
 		description:
 			"Hospedagem de alto desempenho, com baixa latência, infraestrutura no Brasil, armazenamento NVMe e proteção anti-DDoS para jogos como Minecraft, FiveM e muito mais.",
-		url: "https://neonhost.com.br/",
+		url: "https://puffhost.com.br/",
 		siteName: "PuffHost",
 		images: ["/banner.png"],
 	},

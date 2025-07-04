@@ -53,14 +53,14 @@ export const NavbarComponent = () => {
       name: "Área do Cliente",
       description: "Acesse sua conta e gerencie serviços",
       icon: <Users className="w-4 h-4" />,
-      link: "https://app.neonhost.com.br/login",
+      link: "https://app.puffhost.com.br/login",
       badge: "Login",
     },
     {
       name: "Painel de Controle",
       description: "Gerencie seus servidores e recursos",
       icon: <Monitor className="w-4 h-4" />,
-      link: "https://app.neonhost.com.br/clientarea.php",
+      link: "https://app.puffhost.com.br/clientarea.php",
       badge: "Painel",
     },
     {
@@ -539,7 +539,7 @@ export const NavbarComponent = () => {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <NextLink href="https://app.neonhost.com.br/login" target="_blank">
+            <NextLink href="https://app.puffhost.com.br/login" target="_blank">
               <Button
                 size="md"
                 className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-semibold transition-all duration-300 px-5 shadow-lg border border-pink-400/30"
@@ -739,7 +739,7 @@ export const NavbarComponent = () => {
             {/* Mobile Actions */}
             <div className="pt-4 space-y-3 border-t border-gray-800">
               <NavbarItem>
-                <NextLink href="https://app.neonhost.com.br/login" target="_blank" className="w-full">
+                <NextLink href="https://app.puffhost.com.br/login" target="_blank" className="w-full">
                   <Button
                     className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold shadow-lg border border-pink-400/30"
                     size="lg"

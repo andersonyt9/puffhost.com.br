@@ -14,7 +14,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 1",
     price: "69,90",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-1",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-1",
     description: {
       ram: "2GB",
       ssd: "40GB",
@@ -25,7 +25,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 2",
     price: "89,90",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-2",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-2",
     description: {
       ram: "4GB",
       ssd: "40GB",
@@ -36,7 +36,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 3",
     price: "119,90",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-3",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-3",
     description: {
       ram: "6GB",
       ssd: "40GB",
@@ -47,7 +47,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 4",
     price: "169,90",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-4",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-4",
     description: {
       ram: "8GB",
       ssd: "70GB",
@@ -58,7 +58,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 5",
     price: "259,90",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-5",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-5",
     description: {
       ram: "12GB",
       ssd: "80GB",
@@ -69,7 +69,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 6",
     price: "359,90",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-amd-ryzen-6",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-amd-ryzen-6",
     description: {
       ram: "16GB",
       ssd: "120GB",
@@ -80,7 +80,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 7",
     price: "450,00",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-amd-ryzen-7",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-amd-ryzen-7",
     description: {
       ram: "20GB",
       ssd: "160GB",
@@ -91,7 +91,7 @@ export const plans: Plan[] = [
   {
     name: "VPS Puff - 8",
     price: "560,00",
-    link: "https://app.neonhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-8",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-8",
     description: {
       ram: "32GB",
       ssd: "200GB",
