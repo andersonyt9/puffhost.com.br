@@ -19,6 +19,7 @@ import {
   Crown,
   Gamepad2,
 } from "lucide-react"
+import { redmPlans } from "./plans"
 
 export default function VpsRedmPage() {
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null)
@@ -45,55 +46,6 @@ export default function VpsRedmPage() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
-
-  // Planos VPS RedM
-  const redmPlans = [
-    {
-      name: "VPS RedM 1",
-      ram: "2GB RAM",
-      cpu: "2 vCPU",
-      storage: "45GB SSD",
-      price: "83,90",
-      popular: false,
-      slots: "32 jogadores",
-    },
-    {
-      name: "VPS RedM 2",
-      ram: "4GB RAM",
-      cpu: "2 vCPU",
-      storage: "50GB SSD",
-      price: "125,90",
-      popular: false,
-      slots: "48 jogadores",
-    },
-    {
-      name: "VPS RedM 3",
-      ram: "6GB RAM",
-      cpu: "3 vCPU",
-      storage: "60GB SSD",
-      price: "197,90",
-      popular: true,
-      slots: "64 jogadores",
-    },
-    {
-      name: "VPS RedM 4",
-      ram: "8GB RAM",
-      cpu: "4 vCPU",
-      storage: "70GB SSD",
-      price: "245,90",
-      popular: false,
-      slots: "96 jogadores",
-    },
-    {
-      name: "VPS RedM 5",
-      ram: "10GB RAM",
-      cpu: "6 vCPU",
-      storage: "80GB SSD",
-      price: "288,90",
-      popular: false,
-      slots: "128+ jogadores",
-    },
-  ]
 
   const planDetails = {
     "VPS RedM 1": {
@@ -508,11 +460,13 @@ export default function VpsRedmPage() {
                           <div className="text-sm text-gray-600">/mês</div>
                         </div>
                         <button
+                          onClick={() => plan.link && window.open(plan.link, "_blank")}
+                          disabled={!plan.link}
                           className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                             plan.popular
                               ? "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white shadow-lg"
                               : "bg-gray-900 hover:bg-gray-800 text-white"
-                          }`}
+                          } ${!plan.link ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
                         >
                           Contratar
                         </button>

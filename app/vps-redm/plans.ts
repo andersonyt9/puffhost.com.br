@@ -1,0 +1,63 @@
+export interface VpsRedmPlan {
+  name: string
+  ram: string
+  cpu: string
+  storage: string
+  price: string
+  popular: boolean
+  slots: string
+  link: string
+}
+
+export const redmPlans: VpsRedmPlan[] = [
+  {
+    name: "VPS RedM 1",
+    ram: "2GB RAM",
+    cpu: "2 vCPU",
+    storage: "45GB SSD",
+    price: "83,90",
+    popular: false,
+    slots: "32 jogadores",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm",
+  },
+  {
+    name: "VPS RedM 2",
+    ram: "4GB RAM",
+    cpu: "2 vCPU",
+    storage: "50GB SSD",
+    price: "125,90",
+    popular: false,
+    slots: "48 jogadores",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-2",
+  },
+  {
+    name: "VPS RedM 3",
+    ram: "6GB RAM",
+    cpu: "3 vCPU",
+    storage: "60GB SSD",
+    price: "197,90",
+    popular: true,
+    slots: "64 jogadores",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-3",
+  },
+  {
+    name: "VPS RedM 4",
+    ram: "8GB RAM",
+    cpu: "4 vCPU",
+    storage: "70GB SSD",
+    price: "245,90",
+    popular: false,
+    slots: "96 jogadores",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-4",
+  },
+  {
+    name: "VPS RedM 5",
+    ram: "10GB RAM",
+    cpu: "6 vCPU",
+    storage: "80GB SSD",
+    price: "288,90",
+    popular: false,
+    slots: "128+ jogadores",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-5",
+  },
+]

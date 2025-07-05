@@ -14,7 +14,7 @@ export const plans: Plan[] = [
 	{
 		name: "AMD Ryzen 1",
 		price: "305,96",
-		link: "https://app.puffhost.com.br/cart.php?a=confproduct&i=5",
+		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado",
 		description: {
 			ram: "16GB",
 			ssd: "100GB",
@@ -25,7 +25,7 @@ export const plans: Plan[] = [
 	{
 		name: "AMD Ryzen 2",
 		price: "450,90",
-		link: "https://app.puffhost.com.br/cart.php?a=confproduct&i=6",
+		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-2",
 		description: {
 			ram: "24GB",
 			ssd: "250GB",
@@ -36,7 +36,7 @@ export const plans: Plan[] = [
 	{
 		name: "AMD Ryzen 3",
 		price: "593,90",
-		link: null,
+		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-3",
 		description: {
 			ram: "32GB",
 			ssd: "250GB",
@@ -47,7 +47,7 @@ export const plans: Plan[] = [
 	{
 		name: "AMD Ryzen 4",
 		price: "669,90",
-		link: null,
+		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-4",
 		description: {
 			ram: "64GB",
 			ssd: "350GB",

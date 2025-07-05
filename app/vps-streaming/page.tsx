@@ -49,54 +49,59 @@ export default function VpsStreamingPage() {
   // Planos VPS Streaming
   const streamingPlans = [
     {
-      name: "VPS Stream Basic",
+      name: "VPS Stream 1",
       ram: "4GB RAM",
       cpu: "2 vCPU",
       storage: "60GB SSD",
       price: "149,90",
       popular: false,
       quality: "720p 30fps",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming",
     },
     {
-      name: "VPS Stream Pro",
+      name: "VPS Stream 2",
       ram: "6GB RAM",
       cpu: "4 vCPU",
       storage: "80GB SSD",
       price: "219,90",
       popular: false,
       quality: "1080p 30fps",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-2",
     },
     {
-      name: "VPS Stream Advanced",
+      name: "VPS Stream 3",
       ram: "8GB RAM",
       cpu: "6 vCPU",
       storage: "120GB SSD",
       price: "329,90",
       popular: true,
       quality: "1080p 60fps",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-3",
     },
     {
-      name: "VPS Stream Premium",
+      name: "VPS Stream 4",
       ram: "12GB RAM",
       cpu: "8 vCPU",
       storage: "160GB SSD",
       price: "499,90",
       popular: false,
       quality: "1440p 60fps",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-4",
     },
     {
-      name: "VPS Stream Ultimate",
+      name: "VPS Stream 5",
       ram: "16GB RAM",
       cpu: "12 vCPU",
       storage: "240GB SSD",
       price: "799,90",
       popular: false,
       quality: "4K 30fps",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-5",
     },
   ]
 
   const planDetails = {
-    "VPS Stream Basic": {
+    "VPS Stream 1": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "60GB SSD NVMe",
@@ -119,7 +124,7 @@ export default function VpsStreamingPage() {
         latency: "Baixa latência para Brasil",
       },
     },
-    "VPS Stream Pro": {
+    "VPS Stream 2": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "80GB SSD NVMe",
@@ -143,7 +148,7 @@ export default function VpsStreamingPage() {
         recording: "Gravação simultânea suportada",
       },
     },
-    "VPS Stream Advanced": {
+    "VPS Stream 3": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "120GB SSD NVMe",
@@ -168,7 +173,7 @@ export default function VpsStreamingPage() {
         multistream: "Multi-streaming suportado",
       },
     },
-    "VPS Stream Premium": {
+    "VPS Stream 4": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "160GB SSD NVMe",
@@ -194,7 +199,7 @@ export default function VpsStreamingPage() {
         transcoding: "Transcoding em tempo real",
       },
     },
-    "VPS Stream Ultimate": {
+    "VPS Stream 5": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "240GB SSD NVMe",
@@ -496,7 +501,9 @@ export default function VpsStreamingPage() {
                           <div className="text-sm text-gray-600">/mês</div>
                         </div>
                         <button
-                          className={`inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 px-6 py-2 text-sm whitespace-nowrap ${plan.popular ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg" : "bg-gray-800 text-white hover:bg-gray-700"}`}
+                          onClick={() => plan.link && window.open(plan.link, "_blank")}
+                          className={`inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 px-6 py-2 text-sm whitespace-nowrap ${plan.popular ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg" : "bg-gray-800 text-white hover:bg-gray-700"} ${plan.link ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
+                          disabled={!plan.link}
                         >
                           Contratar
                         </button>

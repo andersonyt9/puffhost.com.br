@@ -4,11 +4,6 @@ import { Card, CardBody, Chip } from "@nextui-org/react"
 import { Button } from "@nextui-org/button"
 import {
   Star,
-  ArrowUpFromDot,
-  Cpu,
-  HardDrive,
-  MemoryStick,
-  Network,
   Shield,
   Zap,
   CheckCircle,
@@ -24,123 +19,11 @@ import {
   Crown,
   Sparkles,
 } from "lucide-react"
-import Link from "next/link"
 import { AccordionItems } from "../_components/accordion"
 import { useState, useEffect } from "react"
+import { dedicadoPlans } from "./plans"
 
-const plans = [
-  {
-    nome: "AMD Ryzen 5 5600X",
-    frequencia: "3.7GHz até 4.6GHz",
-    disponibilidade: true,
-    preco: 950.0,
-    nucleos: 6,
-    threads: 12,
-    tier: "Essential",
-    popular: false,
-    specs: [
-      { icon: <Cpu size={20} />, label: "6 Núcleos", value: "12 Threads" },
-      { icon: <MemoryStick size={20} />, label: "64GB RAM", value: "DDR4" },
-      { icon: <HardDrive size={20} />, label: "1TB NVMe", value: "Gen4 SSD" },
-      { icon: <Network size={20} />, label: "1Gbps", value: "Uplink" },
-      { icon: <ArrowUpFromDot size={20} />, label: "20TB", value: "Tráfego" },
-      { icon: <Shield size={20} />, label: "DDoS", value: "348TB/s" },
-    ],
-    recursos: [
-      "Hardware 100% dedicado",
-      "Acesso root completo",
-      "IP dedicado incluído",
-      "Painel de controle avançado",
-      "Monitoramento 24/7",
-      "Suporte técnico prioritário",
-      "Migração gratuita",
-    ],
-    aplicacoes: [
-      "Aplicações empresariais",
-      "Servidores de jogos",
-      "Desenvolvimento e testes",
-      "Hospedagem de sites",
-      "Bancos de dados",
-      "Aplicações web",
-    ],
-  },
-  {
-    nome: "AMD Ryzen 7 7700X",
-    frequencia: "4.5GHz até 5.4GHz",
-    disponibilidade: true,
-    preco: 1550.0,
-    nucleos: 8,
-    threads: 16,
-    tier: "Professional",
-    popular: true,
-    specs: [
-      { icon: <Cpu size={20} />, label: "8 Núcleos", value: "16 Threads" },
-      { icon: <MemoryStick size={20} />, label: "128GB RAM", value: "DDR4" },
-      { icon: <HardDrive size={20} />, label: "2TB NVMe", value: "Gen4 SSD" },
-      { icon: <Network size={20} />, label: "1Gbps", value: "Uplink" },
-      { icon: <ArrowUpFromDot size={20} />, label: "20TB", value: "Tráfego" },
-      { icon: <Shield size={20} />, label: "DDoS", value: "348TB/s" },
-    ],
-    recursos: [
-      "Hardware 100% dedicado",
-      "Acesso root completo",
-      "IP dedicado incluído",
-      "Painel de controle avançado",
-      "Monitoramento 24/7",
-      "Suporte técnico prioritário",
-      "Migração gratuita",
-      "Configuração personalizada",
-      "Consultoria técnica incluída",
-    ],
-    aplicacoes: [
-      "Aplicações enterprise críticas",
-      "Servidores de jogos AAA",
-      "Machine Learning",
-      "Big Data Analytics",
-      "Streaming de alta qualidade",
-      "Aplicações de alta demanda",
-    ],
-  },
-  {
-    nome: "AMD Ryzen 9 7900X",
-    frequencia: "4.7GHz até 5.6GHz",
-    disponibilidade: true,
-    preco: 1900.0,
-    nucleos: 12,
-    threads: 24,
-    tier: "Enterprise",
-    popular: false,
-    specs: [
-      { icon: <Cpu size={20} />, label: "12 Núcleos", value: "24 Threads" },
-      { icon: <MemoryStick size={20} />, label: "128GB RAM", value: "DDR4" },
-      { icon: <HardDrive size={20} />, label: "2TB NVMe", value: "Gen4 SSD" },
-      { icon: <Network size={20} />, label: "1Gbps", value: "Uplink" },
-      { icon: <ArrowUpFromDot size={20} />, label: "40TB", value: "Tráfego" },
-      { icon: <Shield size={20} />, label: "DDoS", value: "348TB/s" },
-    ],
-    recursos: [
-      "Hardware 100% dedicado",
-      "Acesso root completo",
-      "IP dedicado incluído",
-      "Painel de controle avançado",
-      "Monitoramento 24/7",
-      "Suporte técnico prioritário",
-      "Migração gratuita",
-      "Configuração personalizada",
-      "Consultoria técnica incluída",
-      "SLA 99.99% uptime",
-      "Gerente de conta dedicado",
-    ],
-    aplicacoes: [
-      "Infraestrutura crítica",
-      "Aplicações de missão crítica",
-      "Processamento intensivo",
-      "Virtualização avançada",
-      "Clusters de alta performance",
-      "Soluções corporativas",
-    ],
-  },
-]
+const plans = dedicadoPlans
 
 export default function Dedicados() {
   const [mounted, setMounted] = useState(false)
@@ -319,11 +202,10 @@ export default function Dedicados() {
 
                         <div className="space-y-3">
                           <Button
-                            className={`w-full bg-gradient-to-r ${getTierColor(plan.tier)} hover:shadow-lg text-white font-bold py-3`}
+                            onClick={() => plan.link && window.open(plan.link, "_blank")}
+                            disabled={!plan.link}
+                            className={`w-full bg-gradient-to-r ${getTierColor(plan.tier)} hover:shadow-lg text-white font-bold py-3 ${!plan.link ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
                             size="md"
-                            as={Link}
-                            href="https://wa.me/5511968927685?text=Gostaria%20de%20saber%20sobre%20dedicados"
-                            target="_blank"
                           >
                             <Crown className="w-4 h-4 mr-2" />
                             Contratar Agora

@@ -61,7 +61,7 @@ export default function SemiDedicadoPage() {
       storage: "100 GB SSD NVMe",
       price: "305,96",
       popular: false,
-      link: "https://app.puffhost.com.br/cart.php?a=confproduct&i=5",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado",
     },
     {
       name: "AMD Ryzen 2",
@@ -70,7 +70,7 @@ export default function SemiDedicadoPage() {
       storage: "250 GB SSD NVMe",
       price: "450,90",
       popular: true,
-      link: "https://app.puffhost.com.br/cart.php?a=confproduct&i=6",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-2",
     },
     {
       name: "AMD Ryzen 3",
@@ -79,7 +79,7 @@ export default function SemiDedicadoPage() {
       storage: "250 GB SSD NVMe",
       price: "593,90",
       popular: false,
-      link: "https://app.puffhost.com.br/cart.php?a=confproduct&i=6",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-3",
     },
     {
       name: "AMD Ryzen 4",
@@ -88,7 +88,7 @@ export default function SemiDedicadoPage() {
       storage: "350 GB SSD NVMe",
       price: "669,90",
       popular: false,
-      link: "https://app.puffhost.com.br/cart.php?a=confproduct&i=6",
+      link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-4",
     },
   ]
 

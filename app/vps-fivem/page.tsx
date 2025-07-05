@@ -20,6 +20,7 @@ import {
   Settings,
   Activity,
 } from "lucide-react"
+import { plans } from "./plans"
 
 export default function VpsFiveMPage() {
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null)
@@ -50,54 +51,59 @@ export default function VpsFiveMPage() {
   // Dados dos planos VPS FiveM
   const vpsPlans = [
     {
-      name: "VPS FiveM Starter",
+      name: "VPS FiveM 1",
       ram: "2GB RAM",
       cpu: "2 vCPU",
       storage: "45GB SSD NVMe",
       slots: "32 jogadores",
       price: "83,90",
       popular: false,
+      link: plans[0]?.link || "",
     },
     {
-      name: "VPS FiveM Pro",
+      name: "VPS FiveM 2",
       ram: "4GB RAM",
       cpu: "2 vCPU",
       storage: "50GB SSD NVMe",
       slots: "64 jogadores",
       price: "125,90",
       popular: false,
+      link: plans[1]?.link || "",
     },
     {
-      name: "VPS FiveM Advanced",
+      name: "VPS FiveM 3",
       ram: "6GB RAM",
       cpu: "3 vCPU",
       storage: "60GB SSD NVMe",
       slots: "128 jogadores",
       price: "197,90",
       popular: true,
+      link: plans[2]?.link || "",
     },
     {
-      name: "VPS FiveM Premium",
+      name: "VPS FiveM 4",
       ram: "8GB RAM",
       cpu: "4 vCPU",
       storage: "70GB SSD NVMe",
       slots: "200 jogadores",
       price: "245,90",
       popular: false,
+      link: plans[3]?.link || "",
     },
     {
-      name: "VPS FiveM Ultimate",
+      name: "VPS FiveM 5",
       ram: "10GB RAM",
       cpu: "6 vCPU",
       storage: "80GB SSD NVMe",
       slots: "300+ jogadores",
       price: "288,90",
       popular: false,
+      link: plans[4]?.link || "",
     },
   ]
 
   const planDetails = {
-    "VPS FiveM Starter": {
+    "VPS FiveM 1": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "45GB SSD NVMe",
@@ -120,7 +126,7 @@ export default function VpsFiveMPage() {
         scripts: "Liberdade total de configuração",
       },
     },
-    "VPS FiveM Pro": {
+    "VPS FiveM 2": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "50GB SSD NVMe",
@@ -144,7 +150,7 @@ export default function VpsFiveMPage() {
         economy: "Recursos para sistemas complexos",
       },
     },
-    "VPS FiveM Advanced": {
+    "VPS FiveM 3": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "60GB SSD NVMe",
@@ -169,7 +175,7 @@ export default function VpsFiveMPage() {
         jobs: "Suporte a sistemas avançados",
       },
     },
-    "VPS FiveM Premium": {
+    "VPS FiveM 4": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "70GB SSD NVMe",
@@ -195,7 +201,7 @@ export default function VpsFiveMPage() {
         housing: "Recursos para sistemas de casas",
       },
     },
-    "VPS FiveM Ultimate": {
+    "VPS FiveM 5": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "80GB SSD NVMe",
@@ -494,11 +500,13 @@ export default function VpsFiveMPage() {
                           <div className="text-sm text-gray-600">/mês</div>
                         </div>
                         <button
+                          onClick={() => plan.link && window.open(plan.link, "_blank")}
                           className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                             plan.popular
                               ? "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white shadow-lg"
                               : "bg-gray-900 hover:bg-gray-800 text-white"
-                          }`}
+                          } ${plan.link ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
+                          disabled={!plan.link}
                         >
                           Contratar
                         </button>

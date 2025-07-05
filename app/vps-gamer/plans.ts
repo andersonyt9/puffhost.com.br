@@ -13,8 +13,8 @@ export interface Plan {
 export const plans: Plan[] = [
   {
     name: "VPS Puff - 1",
-    price: "69,90",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-1",
+    price: "70,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-1",
     description: {
       ram: "2GB",
       ssd: "40GB",
@@ -24,30 +24,30 @@ export const plans: Plan[] = [
   },
   {
     name: "VPS Puff - 2",
-    price: "89,90",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-2",
+    price: "90,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-2",
     description: {
       ram: "4GB",
-      ssd: "40GB",
+      ssd: "50GB",
       cores: "2 núcleos",
       attrs: ["Anti-DDoS Incluso", "AMD Ryzen"],
     },
   },
   {
     name: "VPS Puff - 3",
-    price: "119,90",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-3",
+    price: "118,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-3",
     description: {
       ram: "6GB",
-      ssd: "40GB",
+      ssd: "60GB",
       cores: "3 núcleos",
       attrs: ["Anti-DDoS Incluso", "AMD Ryzen"],
     },
   },
   {
     name: "VPS Puff - 4",
-    price: "169,90",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-4",
+    price: "167,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-4",
     description: {
       ram: "8GB",
       ssd: "70GB",
@@ -57,8 +57,8 @@ export const plans: Plan[] = [
   },
   {
     name: "VPS Puff - 5",
-    price: "259,90",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-5",
+    price: "257,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-5",
     description: {
       ram: "12GB",
       ssd: "80GB",
@@ -68,33 +68,33 @@ export const plans: Plan[] = [
   },
   {
     name: "VPS Puff - 6",
-    price: "359,90",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-amd-ryzen-6",
+    price: "357,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-6",
     description: {
       ram: "16GB",
-      ssd: "120GB",
+      ssd: "100GB",
       cores: "10 núcleos",
       attrs: ["Anti-DDoS Incluso", "AMD Ryzen"],
     },
   },
   {
     name: "VPS Puff - 7",
-    price: "450,00",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-amd-ryzen-7",
+    price: "447,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-7",
     description: {
       ram: "20GB",
-      ssd: "160GB",
+      ssd: "120GB",
       cores: "12 núcleos",
       attrs: ["Anti-DDoS Incluso", "AMD Ryzen"],
     },
   },
   {
     name: "VPS Puff - 8",
-    price: "560,00",
-    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/amd-ryzen-8",
+    price: "557,90",
+    link: "https://app.puffhost.com.br/index.php?rp=/store/vps-gamer/vps-gamer-8",
     description: {
       ram: "32GB",
-      ssd: "200GB",
+      ssd: "150GB",
       cores: "16 núcleos",
       attrs: ["Anti-DDoS Incluso", "AMD Ryzen"],
     },

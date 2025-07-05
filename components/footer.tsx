@@ -26,7 +26,7 @@ export const Footer = () => {
       color: "text-blue-400",
       borderColor: "border-blue-400",
       links: [
-        { name: "Central de Ajuda", url: "https://app.puffhost.com.br/submitticket.php?step=2&deptid=1" },
+        { name: "Central de Ajuda", url: "https://discord.gg/Tgm2gn9zM3" },
         { name: "Discord", url: "https://discord.gg/Tgm2gn9zM3", badge: "24/7" },
         { name: "FAQ", url: "/faq" },
         { name: "Status", url: "/status" },

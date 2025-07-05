@@ -19,6 +19,7 @@ import {
   HelpCircle,
   ArrowUp,
 } from "lucide-react"
+import { plans } from "./plans"
 
 export default function VpsGamerPage() {
   const [expandedPlan, setExpandedPlan] = useState<string | null>(null)
@@ -45,7 +46,6 @@ export default function VpsGamerPage() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
   }
-
   // Dados dos planos VPS
   const vpsPlans = [
     {
@@ -55,6 +55,7 @@ export default function VpsGamerPage() {
       storage: "40 GB SSD/NVMe",
       price: "70,90",
       popular: false,
+      link: plans[0]?.link || "",
     },
     {
       name: "VPS Gamer 2",
@@ -63,6 +64,7 @@ export default function VpsGamerPage() {
       storage: "50 GB SSD/NVMe",
       price: "90,90",
       popular: false,
+      link: plans[1]?.link || "",
     },
     {
       name: "VPS Gamer 3",
@@ -71,6 +73,7 @@ export default function VpsGamerPage() {
       storage: "60 GB SSD/NVMe",
       price: "118,90",
       popular: true,
+      link: plans[2]?.link || "",
     },
     {
       name: "VPS Gamer 4",
@@ -79,6 +82,7 @@ export default function VpsGamerPage() {
       storage: "70 GB SSD/NVMe",
       price: "167,90",
       popular: false,
+      link: plans[3]?.link || "",
     },
     {
       name: "VPS Gamer 5",
@@ -87,6 +91,7 @@ export default function VpsGamerPage() {
       storage: "80 GB SSD/NVMe",
       price: "257,90",
       popular: false,
+      link: plans[4]?.link || "",
     },
     {
       name: "VPS Gamer 6",
@@ -95,6 +100,7 @@ export default function VpsGamerPage() {
       storage: "100 GB SSD/NVMe",
       price: "357,90",
       popular: false,
+      link: plans[5]?.link || "",
     },
     {
       name: "VPS Gamer 7",
@@ -103,6 +109,7 @@ export default function VpsGamerPage() {
       storage: "120 GB SSD/NVMe",
       price: "447,90",
       popular: false,
+      link: plans[6]?.link || "",
     },
     {
       name: "VPS Gamer 8",
@@ -111,6 +118,7 @@ export default function VpsGamerPage() {
       storage: "150 GB SSD/NVMe",
       price: "557,90",
       popular: false,
+      link: plans[7]?.link || "",
     },
   ]
 
@@ -389,8 +397,8 @@ export default function VpsGamerPage() {
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed font-medium">
               Domine os jogos com{" "}
               <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">latência otimizada</span>,{" "}
-              <span className="text-purple-600 font-bold bg-purple-100 px-2 py-1 rounded-lg">proteção DDoS</span>{" "}
-              e <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">suporte técnico 24/7</span>
+              <span className="text-purple-600 font-bold bg-purple-100 px-2 py-1 rounded-lg">proteção DDoS</span> e{" "}
+              <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">suporte técnico 24/7</span>
             </p>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -445,7 +453,7 @@ export default function VpsGamerPage() {
               <div className="group bg-white/90 backdrop-blur-sm rounded-2xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-6 transition-transform duration-300 shadow-lg">
                   <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12,1C14.67,1.58 16.42,3.25 17,5.25C17.58,7.25 16.67,9.58 14.5,11.5C13.5,12.42 12.25,13 11,13C9.75,13 8.5,12.42 7.5,11.5C5.33,9.58 4.42,7.25 5,5.25C5.58,3.25 7.33,1.58 10,1H12M12,2.5C11.25,2.5 10.5,2.92 10,3.5C9.5,4.08 9.25,4.83 9.5,5.5C9.75,6.17 10.42,6.5 11,6.5C11.58,6.5 12.25,6.17 12.5,5.5C12.75,4.83 12.5,4.08 12,3.5C11.5,2.92 10.75,2.5 10,2.5H12M7,14H17A2,2 0 0,1 19,16V20A2,2 0 0,1 17,22H7A2,2 0 0,1 5,20V16A2,2 0 0,1 7,14M8,15A1,1 0 0,0 7,16V20A1,1 0 0,0 8,21H16A1,1 0 0,0 17,20V16A1,1 0 0,0 16,15H8Z" />
+                    <path d="M12,1C14.67,1.58 16.42,3.25 17,5.25C17.58,7.25 16.67,9.58 14.5,11.5C13.5,12.42 12.25,13 11,13C9.75,13 8.5,12.42 7.5,11.5C5.33,9.58 4.42,7.25 5,5.25C5.58,3.25 7.33,1.58 10,1H12M12,2.5C11.25,2.5 10.5,2.92 10,3.5C9.5,4.08 9.25,4.83 9.5,5.5C9.75,6.17 10.42,6.5 11,6.5C11.58,6.5 12.25,6.17 12.5,5.5C12.75,4.83 12.5,4.08 12,3.5C11.5,2.92 10.75,2.5 10,2.5H12Z" />
                   </svg>
                 </div>
                 <div className="text-2xl font-black text-gray-900 mb-1">24/7</div>
@@ -575,7 +583,9 @@ export default function VpsGamerPage() {
                           <div className="text-xs text-pink-600 font-medium">10% OFF no anual</div>
                         </div>
                         <button
-                          className={`inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 px-8 py-3 text-base whitespace-nowrap ${plan.popular ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl" : "bg-gray-800 text-white hover:bg-gray-700"}`}
+                          onClick={() => plan.link && window.open(plan.link, "_blank")}
+                          className={`inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-200 px-8 py-3 text-base whitespace-nowrap ${plan.popular ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl" : "bg-gray-800 text-white hover:bg-gray-700"} ${plan.link ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
+                          disabled={!plan.link}
                         >
                           Contratar agora
                         </button>
