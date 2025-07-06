@@ -8,7 +8,7 @@ export const dedicadoPlans = [
     threads: 12,
     tier: "Essential",
     popular: false,
-    link: "https://app.puffhost.com.br/index.php?rp=/store/servido-dedicado/servidor-dedicado-1",
+    link: "https://discord.gg/qN8pH33jdh",
     specs: [
       { icon: "Cpu", label: "6 Núcleos", value: "12 Threads" },
       { icon: "MemoryStick", label: "64GB RAM", value: "DDR4" },
@@ -44,7 +44,7 @@ export const dedicadoPlans = [
     threads: 16,
     tier: "Professional",
     popular: true,
-    link: "https://app.puffhost.com.br/index.php?rp=/store/servido-dedicado/servidor-dedicado-2",
+    link: "https://discord.gg/qN8pH33jdh",
     specs: [
       { icon: "Cpu", label: "8 Núcleos", value: "16 Threads" },
       { icon: "MemoryStick", label: "128GB RAM", value: "DDR4" },
@@ -82,7 +82,7 @@ export const dedicadoPlans = [
     threads: 24,
     tier: "Enterprise",
     popular: false,
-    link: "https://app.puffhost.com.br/index.php?rp=/store/servido-dedicado/servidor-dedicado-3",
+    link: "https://discord.gg/qN8pH33jdh",
     specs: [
       { icon: "Cpu", label: "12 Núcleos", value: "24 Threads" },
       { icon: "MemoryStick", label: "128GB RAM", value: "DDR4" },
