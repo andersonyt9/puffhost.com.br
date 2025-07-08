@@ -12,6 +12,22 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+/* Otimizações para performance */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Preload de fontes críticas */
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+}
+
 /* Trocar cor scroll */
 ::selection {
   color: #ec4899;
@@ -39,6 +55,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Otimizações para mobile */
+  .mobile-optimized {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Melhor performance para animações */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  /* Touch targets otimizados */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 /* Animação bounce-y personalizada */
@@ -56,7 +91,7 @@ body {
   animation: bounce-y 3s ease-in-out infinite;
 }
 
-/* Melhorias de acessibilidade */
+/* Melhorias de acessibilidade e performance */
 @media (prefers-reduced-motion: reduce) {
   .animate-bounce-y {
     animation: none;
@@ -66,5 +101,71 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Otimizações específicas para mobile */
+@media (max-width: 768px) {
+  /* Melhor performance em dispositivos móveis */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Otimizar fontes para mobile */
+  body {
+    font-size: 16px; /* Evita zoom no iOS */
+    line-height: 1.5;
+  }
+
+  /* Melhor spacing para touch */
+  button,
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Otimizar imagens para mobile */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Otimizações para telas de alta densidade */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Preload crítico para melhor performance */
+.critical-resource {
+  font-display: swap;
+}
+
+/* Lazy loading otimizado */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
+/* Melhorar performance de scroll */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Otimizações para popover/dropdown no mobile */
+@media (max-width: 1024px) {
+  .popover-content {
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
   }
 }

@@ -104,10 +104,12 @@ export const metadata: Metadata = {
   classification: "Hospedagem Web, VPS, Servidores Dedicados",
   icons: {
     icon: [
-      { url: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png", sizes: "16x16", type: "image/png" },
-      { url: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png", sizes: "180x180", type: "image/png" }],
+    apple: [
+      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+    ],
     other: [
       {
         rel: "mask-icon",
@@ -121,7 +123,7 @@ export const metadata: Metadata = {
     "msapplication-TileColor": "#ec4899",
     "theme-color": "#ffffff",
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export const viewport: Viewport = {
@@ -139,6 +141,7 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
 })
 
 export default async function RootLayout({
@@ -149,10 +152,30 @@ export default async function RootLayout({
   return (
     <html lang="pt-BR" className={inter.variable}>
       <head>
+        {/* Preload crítico para performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="//app.puffhost.com.br" />
+        <link rel="dns-prefetch" href="//discord.gg" />
+
+        {/* Preload recursos críticos */}
+        <link rel="preload" href="/logo-branca.webp" as="image" type="image/webp" />
+
+        {/* Meta tags para performance */}
+        <meta httpEquiv="x-dns-prefetch-control" content="on" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* PWA Meta Tags */}
+        <meta name="application-name" content="PuffHost" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="PuffHost" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#ec4899" />
+        <meta name="msapplication-tap-highlight" content="no" />
 
         {/* Structured Data */}
         <script
@@ -164,39 +187,26 @@ export default async function RootLayout({
               name: "PuffHost",
               url: "https://puffhost.com.br",
               logo: "https://puffhost.com.br/logo-branca.webp",
-              description: "Hospedagem premium no Brasil com VPS, servidores dedicados e soluções para gaming",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Av. Paulista, 1578",
-                addressLocality: "São Paulo",
-                addressRegion: "SP",
-                postalCode: "01310-200",
-                addressCountry: "BR",
-              },
+              description: "Hospedagem Premium no Brasil com VPS Gamer, Dedicados e Semi-Dedicados",
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+55-11-3456-7890",
                 contactType: "customer service",
+                url: "https://discord.gg/Tgm2gn9zM3",
                 availableLanguage: "Portuguese",
               },
-              sameAs: ["https://discord.gg/Tgm2gn9zM3", "https://www.instagram.com/puff.host/#"],
-              offers: {
-                "@type": "AggregateOffer",
-                priceCurrency: "BRL",
-                lowPrice: "29.90",
-                highPrice: "1999.90",
-                offerCount: "20+",
+              sameAs: ["https://discord.gg/Tgm2gn9zM3"],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "BR",
               },
             }),
           }}
         />
       </head>
-      <body className={clsx("min-h-screen bg-white font-sans antialiased", inter.className)}>
-        <div className="relative flex flex-col min-h-screen">
-          <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-            <NavbarComponent />
-          </header>
-          <main className="flex-1">{children}</main>
+      <body className={clsx("min-h-screen bg-background font-sans antialiased mobile-optimized", inter.className)}>
+        <div className="relative flex min-h-screen flex-col">
+          <NavbarComponent />
+          <main className="flex-1 pt-16">{children}</main>
           <Footer />
         </div>
       </body>

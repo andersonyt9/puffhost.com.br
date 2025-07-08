@@ -12,7 +12,6 @@ import {
   Users,
   Monitor,
   Gamepad2,
-  MapPin,
   Award,
   Info,
   Home,
@@ -23,24 +22,89 @@ import {
   Cloud,
 } from "lucide-react"
 import { default as Link, default as NextLink } from "next/link"
-import { useState } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 export const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activePopover, setActivePopover] = useState<string | null>(null)
   const [popoverTimeout, setPopoverTimeout] = useState<NodeJS.Timeout | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
 
-  const handlePopover = (popoverKey: string) => {
-    clearTimeout(popoverTimeout!)
-    setActivePopover((prev) => (prev === popoverKey ? null : popoverKey))
-  }
+  // Detectar se é mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
 
-  const closePopoverWithDelay = () => {
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  // Limpar timeout ao desmontar
+  useEffect(() => {
+    return () => {
+      if (popoverTimeout) {
+        clearTimeout(popoverTimeout)
+      }
+    }
+  }, [popoverTimeout])
+
+  // Função para fechar todos os popovers
+  const closeAllPopovers = useCallback(() => {
+    if (popoverTimeout) {
+      clearTimeout(popoverTimeout)
+    }
+    setActivePopover(null)
+  }, [popoverTimeout])
+
+  // Função para abrir popover (apenas desktop)
+  const handlePopover = useCallback(
+    (popoverKey: string) => {
+      if (isMobile) return // Não abrir popovers no mobile
+
+      if (popoverTimeout) {
+        clearTimeout(popoverTimeout)
+      }
+
+      // Se o mesmo popover está ativo, fechar
+      if (activePopover === popoverKey) {
+        setActivePopover(null)
+      } else {
+        // Fechar outros e abrir o novo
+        setActivePopover(popoverKey)
+      }
+    },
+    [activePopover, popoverTimeout, isMobile],
+  )
+
+  // Função para fechar com delay
+  const closePopoverWithDelay = useCallback(() => {
     const timeout = setTimeout(() => {
       setActivePopover(null)
-    }, 300)
+    }, 200)
     setPopoverTimeout(timeout)
-  }
+  }, [])
+
+  // Fechar popovers quando clicar fora
+  useEffect(() => {
+    const handleClickOutside = () => {
+      closeAllPopovers()
+    }
+
+    if (activePopover) {
+      document.addEventListener("click", handleClickOutside)
+      return () => document.removeEventListener("click", handleClickOutside)
+    }
+  }, [activePopover, closeAllPopovers])
+
+  // Fechar menu mobile quando redimensionar para desktop
+  useEffect(() => {
+    if (!isMobile && isMenuOpen) {
+      setIsMenuOpen(false)
+    }
+  }, [isMobile, isMenuOpen])
 
   const companyOptions = [
     {
@@ -99,16 +163,16 @@ export const NavbarComponent = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50">
       <Navbar
-        className="bg-[#0a0a0a] border-b border-gray-800 shadow-2xl"
-        maxWidth="7xl"
+        className="bg-[#0a0a0a] border-b border-gray-800 shadow-2xl w-full"
         position="static"
+        isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
         {/* Desktop Content */}
         <NavbarContent className="hidden lg:flex gap-6 items-center" justify="center">
           {/* Logo */}
           <NavbarItem>
-            <NextLink className="flex justify-start items-center group" href="/">
+            <NextLink className="flex justify-start items-center group" href="/" onClick={closeAllPopovers}>
               <div className="flex items-center space-x-2.5">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-pink-500 rounded-lg blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -125,14 +189,26 @@ export const NavbarComponent = () => {
 
           {/* Navigation Items */}
           <NavbarItem>
-            <NextLink href="/" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
+            <NextLink
+              href="/"
+              className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+              onClick={closeAllPopovers}
+            >
               Início
             </NextLink>
           </NavbarItem>
 
           {/* Servidores Dropdown - Design Exclusivo PuffHost */}
-          <NavbarItem className="relative" onMouseLeave={closePopoverWithDelay}>
-            <Popover placement="bottom" offset={12} showArrow={false} isOpen={activePopover === "servers"}>
+          <NavbarItem className="relative">
+            <Popover
+              placement="bottom"
+              offset={12}
+              showArrow={false}
+              isOpen={activePopover === "servers"}
+              onOpenChange={(open) => {
+                if (!open) setActivePopover(null)
+              }}
+            >
               <PopoverTrigger>
                 <Button
                   className="p-0 bg-transparent hover:bg-transparent text-gray-300 hover:text-white font-medium transition-colors duration-200 group"
@@ -145,7 +221,8 @@ export const NavbarComponent = () => {
                       }`}
                     />
                   }
-                  onMouseEnter={() => handlePopover("servers")}
+                  onPress={() => handlePopover("servers")}
+                  onMouseEnter={() => !isMobile && handlePopover("servers")}
                 >
                   <div className="flex items-center space-x-2">
                     <Server className="w-4 h-4" />
@@ -155,7 +232,9 @@ export const NavbarComponent = () => {
               </PopoverTrigger>
               <PopoverContent
                 className="w-[420px] p-0 bg-gradient-to-br from-[#0a0a0a] via-[#0d0d0d] to-[#111111] border border-pink-400/20 shadow-2xl rounded-2xl backdrop-blur-xl"
-                onMouseEnter={() => clearTimeout(popoverTimeout!)}
+                onMouseEnter={() => {
+                  if (popoverTimeout) clearTimeout(popoverTimeout)
+                }}
                 onMouseLeave={closePopoverWithDelay}
               >
                 {/* Header Exclusivo */}
@@ -198,7 +277,7 @@ export const NavbarComponent = () => {
 
                     <div className="space-y-2">
                       {/* VPS Gamer - Destaque Principal */}
-                      <Link href="/vps-gamer">
+                      <Link href="/vps-gamer" onClick={closeAllPopovers}>
                         <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-pink-800/40 via-pink-700/30 to-pink-800/40 border border-pink-300/40 hover:border-pink-200/60 transition-all duration-300 cursor-pointer">
                           {/* Efeito de brilho animado */}
                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
@@ -232,7 +311,7 @@ export const NavbarComponent = () => {
 
                       {/* Outros VPS */}
                       <div className="grid gap-2">
-                        <Link href="/semi-dedicado">
+                        <Link href="/semi-dedicado" onClick={closeAllPopovers}>
                           <div className="group p-3 rounded-lg bg-gray-900/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-pink-400/30 transition-all duration-200 cursor-pointer">
                             <div className="flex items-center space-x-3">
                               <div className="p-1.5 bg-pink-400/10 rounded-md border border-pink-400/20">
@@ -250,7 +329,7 @@ export const NavbarComponent = () => {
                           </div>
                         </Link>
 
-                        <Link href="/vps-streaming">
+                        <Link href="/vps-streaming" onClick={closeAllPopovers}>
                           <div className="group p-3 rounded-lg bg-gray-900/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-pink-400/30 transition-all duration-200 cursor-pointer">
                             <div className="flex items-center space-x-3">
                               <div className="p-1.5 bg-pink-400/10 rounded-md border border-pink-400/20">
@@ -268,7 +347,7 @@ export const NavbarComponent = () => {
                           </div>
                         </Link>
 
-                        <Link href="/vps-fivem">
+                        <Link href="/vps-fivem" onClick={closeAllPopovers}>
                           <div className="group p-3 rounded-lg bg-gray-900/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-pink-400/30 transition-all duration-200 cursor-pointer">
                             <div className="flex items-center space-x-3">
                               <div className="p-1.5 bg-pink-400/10 rounded-md border border-pink-400/20">
@@ -285,7 +364,7 @@ export const NavbarComponent = () => {
                             </div>
                           </div>
                         </Link>
-                        <Link href="/vps-redm">
+                        <Link href="/vps-redm" onClick={closeAllPopovers}>
                           <div className="group p-3 rounded-lg bg-gray-900/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-pink-400/30 transition-all duration-200 cursor-pointer">
                             <div className="flex items-center space-x-3">
                               <div className="p-1.5 bg-pink-400/10 rounded-md border border-pink-400/20">
@@ -327,7 +406,7 @@ export const NavbarComponent = () => {
                     </div>
 
                     <div className="space-y-2">
-                      <Link href="/dedicado">
+                      <Link href="/dedicado" onClick={closeAllPopovers}>
                         <div className="group p-3 rounded-lg bg-gray-900/40 hover:bg-gray-800/60 border border-gray-700/50 hover:border-orange-500/30 transition-all duration-200 cursor-pointer">
                           <div className="flex items-center space-x-3">
                             <div className="p-1.5 bg-orange-500/10 rounded-md border border-orange-500/20">
@@ -350,8 +429,16 @@ export const NavbarComponent = () => {
           </NavbarItem>
 
           {/* Empresa Dropdown */}
-          <NavbarItem className="relative" onMouseLeave={closePopoverWithDelay}>
-            <Popover placement="bottom" offset={12} showArrow={false} isOpen={activePopover === "company"}>
+          <NavbarItem className="relative">
+            <Popover
+              placement="bottom"
+              offset={12}
+              showArrow={false}
+              isOpen={activePopover === "company"}
+              onOpenChange={(open) => {
+                if (!open) setActivePopover(null)
+              }}
+            >
               <PopoverTrigger>
                 <Button
                   className="p-0 bg-transparent hover:bg-transparent text-gray-300 hover:text-white font-medium transition-colors duration-200 group"
@@ -364,7 +451,8 @@ export const NavbarComponent = () => {
                       }`}
                     />
                   }
-                  onMouseEnter={() => handlePopover("company")}
+                  onPress={() => handlePopover("company")}
+                  onMouseEnter={() => !isMobile && handlePopover("company")}
                 >
                   <div className="flex items-center space-x-2">
                     <Building2 className="w-4 h-4" />
@@ -374,7 +462,9 @@ export const NavbarComponent = () => {
               </PopoverTrigger>
               <PopoverContent
                 className="w-[420px] p-0 bg-[#0a0a0a] border border-gray-700/60 shadow-2xl rounded-xl"
-                onMouseEnter={() => clearTimeout(popoverTimeout!)}
+                onMouseEnter={() => {
+                  if (popoverTimeout) clearTimeout(popoverTimeout)
+                }}
                 onMouseLeave={closePopoverWithDelay}
               >
                 <div className="p-4">
@@ -396,6 +486,7 @@ export const NavbarComponent = () => {
                         href={option.link}
                         key={index}
                         target={option.link.startsWith("http") ? "_blank" : undefined}
+                        onClick={closeAllPopovers}
                       >
                         <div className="group p-3 rounded-lg hover:bg-gray-800/60 transition-colors border border-transparent hover:border-gray-700/50">
                           <div className="flex items-center space-x-3">
@@ -427,8 +518,16 @@ export const NavbarComponent = () => {
           </NavbarItem>
 
           {/* Suporte Dropdown */}
-          <NavbarItem className="relative" onMouseLeave={closePopoverWithDelay}>
-            <Popover placement="bottom" offset={12} showArrow={false} isOpen={activePopover === "support"}>
+          <NavbarItem className="relative">
+            <Popover
+              placement="bottom"
+              offset={12}
+              showArrow={false}
+              isOpen={activePopover === "support"}
+              onOpenChange={(open) => {
+                if (!open) setActivePopover(null)
+              }}
+            >
               <PopoverTrigger>
                 <Button
                   className="p-0 bg-transparent hover:bg-transparent text-gray-300 hover:text-white font-medium transition-colors duration-200 group"
@@ -441,7 +540,8 @@ export const NavbarComponent = () => {
                       }`}
                     />
                   }
-                  onMouseEnter={() => handlePopover("support")}
+                  onPress={() => handlePopover("support")}
+                  onMouseEnter={() => !isMobile && handlePopover("support")}
                 >
                   <div className="flex items-center space-x-2">
                     <Headphones className="w-4 h-4" />
@@ -451,7 +551,9 @@ export const NavbarComponent = () => {
               </PopoverTrigger>
               <PopoverContent
                 className="w-[350px] p-0 bg-[#0a0a0a] border border-gray-700/60 shadow-2xl rounded-xl"
-                onMouseEnter={() => clearTimeout(popoverTimeout!)}
+                onMouseEnter={() => {
+                  if (popoverTimeout) clearTimeout(popoverTimeout)
+                }}
                 onMouseLeave={closePopoverWithDelay}
               >
                 <div className="p-4">
@@ -470,6 +572,7 @@ export const NavbarComponent = () => {
                         href={option.link}
                         key={index}
                         target={option.link.startsWith("http") ? "_blank" : undefined}
+                        onClick={closeAllPopovers}
                       >
                         <div className="group p-3 rounded-lg hover:bg-gray-800/60 transition-colors border border-transparent hover:border-gray-700/50">
                           <div className="flex items-center space-x-3">
@@ -504,7 +607,7 @@ export const NavbarComponent = () => {
         {/* Mobile Menu Toggle */}
         <NavbarContent className="lg:hidden" justify="start">
           <NavbarItem>
-            <NextLink className="flex justify-start items-center group" href="/">
+            <NextLink className="flex justify-start items-center group" href="/" onClick={() => setIsMenuOpen(false)}>
               <div className="flex items-center space-x-2">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-pink-500 rounded-lg blur-sm opacity-30 group-hover:opacity-50 transition-opacity"></div>
@@ -525,7 +628,7 @@ export const NavbarComponent = () => {
         {/* Right Side - Desktop */}
         <NavbarContent className="hidden lg:flex gap-3" justify="end">
           <NavbarItem>
-            <Link href="https://discord.gg/Tgm2gn9zM3" target="_blank">
+            <Link href="https://discord.gg/Tgm2gn9zM3" target="_blank" onClick={closeAllPopovers}>
               <Button
                 isIconOnly
                 className="bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 hover:text-white border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300"
@@ -539,7 +642,7 @@ export const NavbarComponent = () => {
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <NextLink href="https://app.puffhost.com.br/login" target="_blank">
+            <NextLink href="https://app.puffhost.com.br/login" target="_blank" onClick={closeAllPopovers}>
               <Button
                 size="md"
                 className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white font-semibold transition-all duration-300 px-5 shadow-lg border border-pink-400/30"
@@ -554,94 +657,103 @@ export const NavbarComponent = () => {
         </NavbarContent>
 
         {/* Mobile Menu */}
-        <NavbarMenu className="pt-6 bg-[#0a0a0a] border-t border-gray-800">
-          <div className="flex flex-col gap-4">
+        <NavbarMenu className="pt-6 bg-[#0a0a0a] border-t border-gray-800 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="flex flex-col gap-4 pb-8">
             <NavbarItem>
-              <NextLink href="/" className="w-full text-white font-medium py-2 flex items-center space-x-2">
+              <NextLink
+                href="/"
+                className="w-full text-white font-medium py-3 flex items-center space-x-2 px-2 rounded-lg hover:bg-pink-400/10 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 <Home className="w-4 h-4 text-pink-300" />
                 <span>Início</span>
               </NextLink>
             </NavbarItem>
 
             {/* Mobile Servers */}
-            <div className="space-y-2">
-              <h3 className="text-pink-300 font-semibold text-sm uppercase tracking-wide flex items-center space-x-2">
+            <div className="space-y-3">
+              <h3 className="text-pink-300 font-semibold text-sm uppercase tracking-wide flex items-center space-x-2 px-2">
                 <Server className="w-4 h-4" />
                 <span>Servidores</span>
               </h3>
 
               {/* VPS Section */}
-              <div className="ml-4 space-y-1">
-                <p className="text-xs text-gray-500 uppercase tracking-wider flex items-center space-x-1">
+              <div className="ml-4 space-y-2">
+                <p className="text-xs text-gray-500 uppercase tracking-wider flex items-center space-x-1 px-2">
                   <div className="w-1 h-1 bg-pink-400 rounded-full"></div>
                   <span>VPS</span>
                 </p>
+
                 <NavbarItem>
-                  <Link href="/semi-dedicado" className="w-full">
-                    <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
+                  <Link href="/semi-dedicado" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
                       <div className="text-pink-300 p-1 bg-pink-400/15 rounded">
-                        <Database className="w-3 h-3" />
+                        <Database className="w-4 h-4" />
                       </div>
                       <div className="flex-1">
                         <span className="text-white text-sm font-medium">Semi Dedicado</span>
-                        <p className="text-xs text-gray-400">R$ 89,90/mês</p>
+                        <p className="text-xs text-gray-400">A partir de R$ 305,96/mês</p>
                       </div>
                     </div>
                   </Link>
                 </NavbarItem>
+
                 <NavbarItem>
-                  <Link href="/vps-streaming" className="w-full">
-                    <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
+                  <Link href="/vps-streaming" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
                       <div className="text-pink-300 p-1 bg-pink-400/15 rounded">
-                        <Globe className="w-3 h-3" />
+                        <Globe className="w-4 h-4" />
                       </div>
                       <div className="flex-1">
                         <span className="text-white text-sm font-medium">VPS Streaming</span>
-                        <p className="text-xs text-gray-400">R$ 129,90/mês</p>
+                        <p className="text-xs text-gray-400">A partir de R$ 149,90/mês</p>
                       </div>
                     </div>
                   </Link>
                 </NavbarItem>
+
                 <NavbarItem>
-                  <Link href="/vps-gamer" className="w-full">
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-pink-800/40 to-pink-700/30 border border-pink-300/40">
+                  <Link href="/vps-gamer" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                    <div className="p-3 rounded-lg bg-gradient-to-br from-pink-800/40 to-pink-700/30 border border-pink-300/40">
                       <div className="flex items-center space-x-3">
                         <div className="text-pink-300 p-1 bg-pink-400/20 rounded">
-                          <Gamepad2 className="w-3 h-3" />
+                          <Gamepad2 className="w-4 h-4" />
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2">
                             <span className="text-white text-sm font-semibold">VPS Gamer</span>
                             <span className="text-[10px] text-green-400 font-bold">POPULAR</span>
                           </div>
-                          <p className="text-xs text-pink-300">R$ 72,90/mês</p>
+                          <p className="text-xs text-pink-300">A partir de R$ 70,90/mês</p>
                         </div>
                       </div>
                     </div>
                   </Link>
                 </NavbarItem>
+
                 <NavbarItem>
-                  <Link href="/vps-fivem" className="w-full">
-                    <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
+                  <Link href="/vps-fivem" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
                       <div className="text-pink-300 p-1 bg-pink-400/10 border border-pink-400/20 rounded">
-                        <Monitor className="w-3 h-3" />
+                        <Monitor className="w-4 h-4" />
                       </div>
                       <div className="flex-1">
                         <span className="text-white text-sm font-medium">VPS FiveM</span>
-                        <p className="text-xs text-gray-400">R$ 99,90/mês</p>
+                        <p className="text-xs text-gray-400">A partir de R$ 83,90/mês</p>
                       </div>
                     </div>
                   </Link>
                 </NavbarItem>
+
                 <NavbarItem>
-                  <Link href="/vps-redm" className="w-full">
-                    <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
+                  <Link href="/vps-redm" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-pink-400/10 transition-colors border border-gray-800 hover:border-pink-400/50">
                       <div className="text-pink-300 p-1 bg-pink-400/10 border border-pink-400/20 rounded">
-                        <Users className="w-3 h-3" />
+                        <Users className="w-4 h-4" />
                       </div>
                       <div className="flex-1">
                         <span className="text-white text-sm font-medium">VPS RedM</span>
-                        <p className="text-xs text-gray-400">R$ 119,90/mês</p>
+                        <p className="text-xs text-gray-400">Em breve</p>
                       </div>
                     </div>
                   </Link>
@@ -649,20 +761,20 @@ export const NavbarComponent = () => {
               </div>
 
               {/* Baremetal Section */}
-              <div className="ml-4 space-y-1 mt-3">
-                <p className="text-xs text-gray-500 uppercase tracking-wider flex items-center space-x-1">
+              <div className="ml-4 space-y-2 mt-4">
+                <p className="text-xs text-gray-500 uppercase tracking-wider flex items-center space-x-1 px-2">
                   <div className="w-1 h-1 bg-orange-500 rounded-full"></div>
                   <span>Baremetal</span>
                 </p>
                 <NavbarItem>
-                  <Link href="/dedicado" className="w-full">
-                    <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-orange-500/10 transition-colors border border-gray-800 hover:border-orange-500/50">
+                  <Link href="/dedicado" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-orange-500/10 transition-colors border border-gray-800 hover:border-orange-500/50">
                       <div className="text-orange-400 p-1 bg-orange-500/15 rounded">
-                        <HardDrive className="w-3 h-3" />
+                        <HardDrive className="w-4 h-4" />
                       </div>
                       <div className="flex-1">
                         <span className="text-white text-sm font-medium">Servidor Dedicado</span>
-                        <p className="text-xs text-gray-400">R$ 1.299/mês</p>
+                        <p className="text-xs text-gray-400">A partir de R$ 950,00/mês</p>
                       </div>
                     </div>
                   </Link>
@@ -671,8 +783,8 @@ export const NavbarComponent = () => {
             </div>
 
             {/* Mobile Company */}
-            <div className="space-y-2">
-              <h3 className="text-pink-300 font-semibold text-sm uppercase tracking-wide flex items-center space-x-2">
+            <div className="space-y-3">
+              <h3 className="text-pink-300 font-semibold text-sm uppercase tracking-wide flex items-center space-x-2 px-2">
                 <Building2 className="w-4 h-4" />
                 <span>Empresa</span>
               </h3>
@@ -682,14 +794,15 @@ export const NavbarComponent = () => {
                     href={option.link}
                     className="w-full"
                     target={option.link.startsWith("http") ? "_blank" : undefined}
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/60 transition-colors border border-gray-800 hover:border-gray-700/50">
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/60 transition-colors border border-gray-800 hover:border-gray-700/50 mx-2">
                       <div className="text-pink-300 p-1 bg-pink-400/10 rounded border border-pink-400/20">
                         {option.icon}
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-2">
-                          <span className="text-white font-medium">{option.name}</span>
+                          <span className="text-white font-medium text-sm">{option.name}</span>
                           {option.badge && (
                             <span className="px-2 py-0.5 text-xs rounded-full bg-pink-400/20 text-pink-300 border border-pink-400/30">
                               {option.badge}
@@ -704,8 +817,8 @@ export const NavbarComponent = () => {
             </div>
 
             {/* Mobile Support */}
-            <div className="space-y-2">
-              <h3 className="text-pink-300 font-semibold text-sm uppercase tracking-wide flex items-center space-x-2">
+            <div className="space-y-3">
+              <h3 className="text-pink-300 font-semibold text-sm uppercase tracking-wide flex items-center space-x-2 px-2">
                 <Headphones className="w-4 h-4" />
                 <span>Suporte</span>
               </h3>
@@ -715,14 +828,15 @@ export const NavbarComponent = () => {
                     href={option.link}
                     target={option.link.startsWith("http") ? "_blank" : undefined}
                     className="w-full"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/60 transition-colors border border-gray-800 hover:border-gray-700/50">
+                    <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/60 transition-colors border border-gray-800 hover:border-gray-700/50 mx-2">
                       <div className="text-pink-300 p-1 bg-pink-400/10 rounded border border-pink-400/20">
                         {option.icon}
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-2">
-                          <span className="text-white font-medium">{option.name}</span>
+                          <span className="text-white font-medium text-sm">{option.name}</span>
                           {option.badge && (
                             <span className="px-2 py-0.5 text-xs rounded-full bg-pink-400/20 text-pink-300 border border-pink-400/30">
                               {option.badge}
@@ -737,9 +851,41 @@ export const NavbarComponent = () => {
             </div>
 
             {/* Mobile Actions */}
-            <div className="pt-4 space-y-3 border-t border-gray-800">
+            <div className="pt-4 space-y-3 border-t border-gray-800 mx-2">
               <NavbarItem>
-                <NextLink href="https://app.puffhost.com.br/login" target="_blank" className="w-full">
+                <NextLink
+                  href="https://discord.gg/Tgm2gn9zM3"
+                  target="_blank"
+                  className="w-full"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Button
+                    className="w-full bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 hover:text-white border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-300"
+                    size="lg"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                      >
+                        <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
+                      </svg>
+                      <span>Discord</span>
+                    </div>
+                  </Button>
+                </NextLink>
+              </NavbarItem>
+
+              <NavbarItem>
+                <NextLink
+                  href="https://app.puffhost.com.br/login"
+                  target="_blank"
+                  className="w-full"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <Button
                     className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold shadow-lg border border-pink-400/30"
                     size="lg"
