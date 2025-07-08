@@ -39,8 +39,8 @@ export const Footer = () => {
       color: "text-green-400",
       borderColor: "border-green-400",
       links: [
-        { name: "Área do Cliente", url: "/cliente" },
-        { name: "Painel de Controle", url: "/painel" },
+        { name: "Área do Cliente", url: "https://app.puffhost.com.br/clientarea.php" },
+        { name: "Painel de Controle", url: "https://app.puffhost.com.br/clientarea.php" },
         { name: "Sobre Nós", url: "/sobre" },
         { name: "Termos de Serviço", url: "https://docs.google.com/document/d/1M0vO1m2AhLXjYe8J44XXJKNKhZ_KsLssNj1IKuuG3LI/edit?usp=sharing" },
       ],
@@ -189,7 +189,7 @@ export const Footer = () => {
               <Link href="/privacidade" className="hover:text-white transition-colors">
                 Privacidade
               </Link>
-              <Link href="/termos" className="hover:text-white transition-colors">
+              <Link href="https://docs.google.com/document/d/1M0vO1m2AhLXjYe8J44XXJKNKhZ_KsLssNj1IKuuG3LI/edit?usp=sharing" className="hover:text-white transition-colors">
                 Termos
               </Link>
               <Link href="/cookies" className="hover:text-white transition-colors">
@@ -198,7 +198,7 @@ export const Footer = () => {
               <span className="text-gray-500">
                 Desenvolvido por{" "}
                 <Link
-                  href="https://andersondv.dev"
+                  href="https://discord.gg/qN8pH33jdh"
                   target="_blank"
                   className="text-pink-400 hover:text-pink-300 font-semibold"
                 >

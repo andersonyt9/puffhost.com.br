@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 		images: ["/banner.png"],
 	},
 	icons: {
-		icon: "/favicon.ico",
+		icon: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png",
 	},
 };
 

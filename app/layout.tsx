@@ -9,11 +9,11 @@ import { Inter } from "next/font/google"
 
 export const metadata: Metadata = {
   title: {
-    default: "PuffHost - Hospedagem Premium no Brasil | VPS, Dedicados e Gaming",
+    default: "PuffHost — Hospedagem Premium 100% Brasileira | VPS Gamer, Dedicados e Muito Mais",
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Hospedagem de alta performance no Brasil com VPS Gamer, servidores dedicados e semi-dedicados. AMD Ryzen, SSD NVMe, Anti-DDoS 348TB/s e suporte 24/7. Ideal para gaming, streaming e empresas.",
+    "Hospedagem Premium no Brasil com desempenho extremo — VPS Gamer, Semi-Dedicados e Dedicados equipados com AMD Ryzen, SSD NVMe ultrarrápido e proteção Anti-DDoS de até 348Tb/s. Suporte 24/7 especializado para projetos de games, streaming e empresas.",
   keywords: [
     "hospedagem brasil",
     "VPS brasil",
@@ -62,24 +62,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: "https://puffhost.com.br",
-    title: "PuffHost - Hospedagem Premium no Brasil | VPS, Dedicados e Gaming",
+    title: "PuffHost — Hospedagem Premium no Brasil com foco em VPS, Dedicados e Servidores Gamer",
     description:
-      "Hospedagem de alta performance no Brasil com VPS Gamer, servidores dedicados e semi-dedicados. AMD Ryzen, SSD NVMe, Anti-DDoS 348TB/s e suporte 24/7.",
+      "Hospedagem de Alta Performance no Brasil — VPS Gamer, Semi-Dedicados e Dedicados com AMD Ryzen, SSD NVMe, proteção Anti-DDoS de até 348Tb/s e suporte 24/7 especializado.",
     siteName: "PuffHost",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "PuffHost - Hospedagem Premium no Brasil",
+        alt: "PuffHost — Hospedagem de Alta Performance no Brasil",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PuffHost - Hospedagem Premium no Brasil",
+    title: "PuffHost — Hospedagem de Alta Performance no Brasil",
     description:
-      "VPS Gamer, servidores dedicados e hospedagem premium com AMD Ryzen, SSD NVMe e suporte 24/7 no Brasil.",
+      "VPS Gamer, Dedicados e Hospedagem Premium no Brasil com Ryzen de última geração, SSD NVMe ultrarrápido e suporte 24/7 especializado.",
     images: ["/og-image.jpg"],
     creator: "@puffhost",
     site: "@puffhost",
@@ -104,10 +104,10 @@ export const metadata: Metadata = {
   classification: "Hospedagem Web, VPS, Servidores Dedicados",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.ico", sizes: "32x32", type: "image/png" },
+      { url: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png", sizes: "16x16", type: "image/png" },
+      { url: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: [{ url: "/favicon.ico", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/favicon.png", sizes: "180x180", type: "image/png" }],
     other: [
       {
         rel: "mask-icon",
@@ -179,7 +179,7 @@ export default async function RootLayout({
                 contactType: "customer service",
                 availableLanguage: "Portuguese",
               },
-              sameAs: ["https://discord.gg/Tgm2gn9zM3", "https://twitter.com/puffhost", "https://www.instagram.com/puff.host/#"],
+              sameAs: ["https://discord.gg/Tgm2gn9zM3", "https://www.instagram.com/puff.host/#"],
               offers: {
                 "@type": "AggregateOffer",
                 priceCurrency: "BRL",
