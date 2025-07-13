@@ -51,7 +51,7 @@ export default function VpsFiveMPage() {
   // Dados dos planos VPS FiveM
   const vpsPlans = [
     {
-      name: "VPS FiveM 1",
+      name: "Puff FiveStart",
       ram: "2GB RAM",
       cpu: "2 vCPU",
       storage: "45GB SSD NVMe",
@@ -61,7 +61,7 @@ export default function VpsFiveMPage() {
       link: plans[0]?.link || "",
     },
     {
-      name: "VPS FiveM 2",
+      name: "Puff FiveCore",
       ram: "4GB RAM",
       cpu: "2 vCPU",
       storage: "50GB SSD NVMe",
@@ -71,7 +71,7 @@ export default function VpsFiveMPage() {
       link: plans[1]?.link || "",
     },
     {
-      name: "VPS FiveM 3",
+      name: "Puff FiveForce",
       ram: "6GB RAM",
       cpu: "3 vCPU",
       storage: "60GB SSD NVMe",
@@ -81,7 +81,7 @@ export default function VpsFiveMPage() {
       link: plans[2]?.link || "",
     },
     {
-      name: "VPS FiveM 4",
+      name: "Puff FivePower",
       ram: "8GB RAM",
       cpu: "4 vCPU",
       storage: "70GB SSD NVMe",
@@ -91,7 +91,7 @@ export default function VpsFiveMPage() {
       link: plans[3]?.link || "",
     },
     {
-      name: "VPS FiveM 5",
+      name: "Puff FiveElite",
       ram: "10GB RAM",
       cpu: "6 vCPU",
       storage: "80GB SSD NVMe",
@@ -103,7 +103,7 @@ export default function VpsFiveMPage() {
   ]
 
   const planDetails = {
-    "VPS FiveM 1": {
+    "Puff FiveStart": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "45GB SSD NVMe",
@@ -126,7 +126,7 @@ export default function VpsFiveMPage() {
         scripts: "Liberdade total de configuração",
       },
     },
-    "VPS FiveM 2": {
+    "Puff FiveCore": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "50GB SSD NVMe",
@@ -150,7 +150,7 @@ export default function VpsFiveMPage() {
         economy: "Recursos para sistemas complexos",
       },
     },
-    "VPS FiveM 3": {
+    "Puff FiveForce": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "60GB SSD NVMe",
@@ -175,7 +175,7 @@ export default function VpsFiveMPage() {
         jobs: "Suporte a sistemas avançados",
       },
     },
-    "VPS FiveM 4": {
+    "Puff FivePower": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "70GB SSD NVMe",
@@ -201,7 +201,7 @@ export default function VpsFiveMPage() {
         housing: "Recursos para sistemas de casas",
       },
     },
-    "VPS FiveM 5": {
+    "Puff FiveElite": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "80GB SSD NVMe",

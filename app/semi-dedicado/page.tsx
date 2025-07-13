@@ -55,7 +55,7 @@ export default function SemiDedicadoPage() {
   // Dados dos planos Semi-Dedicados
   const semiDedicatedPlans = [
     {
-      name: "AMD Ryzen 1",
+      name: "Puff CoreFusion",
       ram: "16GB RAM",
       cpu: "8 núcleos",
       storage: "100 GB SSD NVMe",
@@ -64,7 +64,7 @@ export default function SemiDedicadoPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado",
     },
     {
-      name: "AMD Ryzen 2",
+      name: "Puff SteelEngine",
       ram: "24GB RAM",
       cpu: "8 núcleos",
       storage: "250 GB SSD NVMe",
@@ -73,7 +73,7 @@ export default function SemiDedicadoPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-2",
     },
     {
-      name: "AMD Ryzen 3",
+      name: "Puff NitroPulse",
       ram: "32GB RAM",
       cpu: "9 núcleos",
       storage: "250 GB SSD NVMe",
@@ -82,7 +82,7 @@ export default function SemiDedicadoPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-3",
     },
     {
-      name: "AMD Ryzen 4",
+      name: "Puff IronMaster",
       ram: "64GB RAM",
       cpu: "9 núcleos",
       storage: "350 GB SSD NVMe",
@@ -93,7 +93,7 @@ export default function SemiDedicadoPage() {
   ]
 
   const planDetails = {
-    "AMD Ryzen 1": {
+    "Puff CoreFusion": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "100 GB SSD NVMe Gen4",
@@ -116,7 +116,7 @@ export default function SemiDedicadoPage() {
         applications: "Aplicações web empresariais",
       },
     },
-    "AMD Ryzen 2": {
+    "Puff SteelEngine": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "250 GB SSD NVMe Gen4",
@@ -139,7 +139,7 @@ export default function SemiDedicadoPage() {
         applications: "ERP, CRM e sistemas empresariais",
       },
     },
-    "AMD Ryzen 3": {
+    "Puff NitroPulse": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "250 GB SSD NVMe Gen4",
@@ -162,7 +162,7 @@ export default function SemiDedicadoPage() {
         applications: "Sistemas críticos de missão",
       },
     },
-    "AMD Ryzen 4": {
+    "Puff IronMaster": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "350 GB SSD NVMe Gen4",

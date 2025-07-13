@@ -11,7 +11,7 @@ export interface VpsRedmPlan {
 
 export const redmPlans: VpsRedmPlan[] = [
   {
-    name: "VPS RedM 1",
+    name: "Puff PioneerNode",
     ram: "2GB RAM",
     cpu: "2 vCPU",
     storage: "45GB SSD",
@@ -21,7 +21,7 @@ export const redmPlans: VpsRedmPlan[] = [
     link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm",
   },
   {
-    name: "VPS RedM 2",
+    name: "Puff OutlawCore",
     ram: "4GB RAM",
     cpu: "2 vCPU",
     storage: "50GB SSD",
@@ -31,7 +31,7 @@ export const redmPlans: VpsRedmPlan[] = [
     link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-2",
   },
   {
-    name: "VPS RedM 3",
+    name: "Puff SheriffHost",
     ram: "6GB RAM",
     cpu: "3 vCPU",
     storage: "60GB SSD",
@@ -41,7 +41,7 @@ export const redmPlans: VpsRedmPlan[] = [
     link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-3",
   },
   {
-    name: "VPS RedM 4",
+    name: "Puff DesertEngine",
     ram: "8GB RAM",
     cpu: "4 vCPU",
     storage: "70GB SSD",
@@ -51,7 +51,7 @@ export const redmPlans: VpsRedmPlan[] = [
     link: "https://app.puffhost.com.br/index.php?rp=/store/vps-redm/vps-redm-4",
   },
   {
-    name: "VPS RedM 5",
+    name: "Puff LegendaryWest",
     ram: "10GB RAM",
     cpu: "6 vCPU",
     storage: "80GB SSD",

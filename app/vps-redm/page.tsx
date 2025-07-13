@@ -48,7 +48,7 @@ export default function VpsRedmPage() {
   }
 
   const planDetails = {
-    "VPS RedM 1": {
+    "Puff PioneerNode": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "45GB SSD NVMe",
@@ -71,7 +71,7 @@ export default function VpsRedmPage() {
         scripts: "Liberdade total de configuração",
       },
     },
-    "VPS RedM 2": {
+    "Puff OutlawCore": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "50GB SSD NVMe",
@@ -95,7 +95,7 @@ export default function VpsRedmPage() {
         economy: "Recursos para sistemas complexos",
       },
     },
-    "VPS RedM 3": {
+    "Puff SheriffHost": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "60GB SSD NVMe",
@@ -120,7 +120,7 @@ export default function VpsRedmPage() {
         jobs: "Suporte a sistemas avançados",
       },
     },
-    "VPS RedM 4": {
+    "Puff DesertEngine": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "70GB SSD NVMe",
@@ -146,7 +146,7 @@ export default function VpsRedmPage() {
         properties: "Recursos para sistemas de propriedades",
       },
     },
-    "VPS RedM 5": {
+    "Puff LegendaryWest": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "80GB SSD NVMe",

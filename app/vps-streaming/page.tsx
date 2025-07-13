@@ -49,7 +49,7 @@ export default function VpsStreamingPage() {
   // Planos VPS Streaming
   const streamingPlans = [
     {
-      name: "VPS Stream 1",
+      name: "Puff StreamLite",
       ram: "4GB RAM",
       cpu: "2 vCPU",
       storage: "60GB SSD",
@@ -59,7 +59,7 @@ export default function VpsStreamingPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming",
     },
     {
-      name: "VPS Stream 2",
+      name: "Puff StreamFlow",
       ram: "6GB RAM",
       cpu: "4 vCPU",
       storage: "80GB SSD",
@@ -69,7 +69,7 @@ export default function VpsStreamingPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-2",
     },
     {
-      name: "VPS Stream 3",
+      name: "Puff StreamBoost",
       ram: "8GB RAM",
       cpu: "6 vCPU",
       storage: "120GB SSD",
@@ -79,7 +79,7 @@ export default function VpsStreamingPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-3",
     },
     {
-      name: "VPS Stream 4",
+      name: "Puff StreamPro",
       ram: "12GB RAM",
       cpu: "8 vCPU",
       storage: "160GB SSD",
@@ -89,7 +89,7 @@ export default function VpsStreamingPage() {
       link: "https://app.puffhost.com.br/index.php?rp=/store/vps-streaming/vps-streaming-4",
     },
     {
-      name: "VPS Stream 5",
+      name: "Puff StreamXtreme",
       ram: "16GB RAM",
       cpu: "12 vCPU",
       storage: "240GB SSD",
@@ -101,7 +101,7 @@ export default function VpsStreamingPage() {
   ]
 
   const planDetails = {
-    "VPS Stream 1": {
+    "Puff StreamLite": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "60GB SSD NVMe",
@@ -124,7 +124,7 @@ export default function VpsStreamingPage() {
         latency: "Baixa latência para Brasil",
       },
     },
-    "VPS Stream 2": {
+    "Puff StreamFlow": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "80GB SSD NVMe",
@@ -148,7 +148,7 @@ export default function VpsStreamingPage() {
         recording: "Gravação simultânea suportada",
       },
     },
-    "VPS Stream 3": {
+    "Puff StreamBoost": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "120GB SSD NVMe",
@@ -173,7 +173,7 @@ export default function VpsStreamingPage() {
         multistream: "Multi-streaming suportado",
       },
     },
-    "VPS Stream 4": {
+    "Puff StreamPro": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "160GB SSD NVMe",
@@ -199,7 +199,7 @@ export default function VpsStreamingPage() {
         transcoding: "Transcoding em tempo real",
       },
     },
-    "VPS Stream 5": {
+    "Puff StreamXtreme": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "240GB SSD NVMe",

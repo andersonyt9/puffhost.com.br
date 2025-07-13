@@ -49,7 +49,7 @@ export default function VpsGamerPage() {
   // Dados dos planos VPS
   const vpsPlans = [
     {
-      name: "VPS Gamer 1",
+      name: "Puff Start",
       ram: "2GB RAM",
       cpu: "2 CPU",
       storage: "40 GB SSD/NVMe",
@@ -58,7 +58,7 @@ export default function VpsGamerPage() {
       link: plans[0]?.link || "",
     },
     {
-      name: "VPS Gamer 2",
+      name: "Puff Core",
       ram: "4GB RAM",
       cpu: "2 CPU",
       storage: "50 GB SSD/NVMe",
@@ -67,7 +67,7 @@ export default function VpsGamerPage() {
       link: plans[1]?.link || "",
     },
     {
-      name: "VPS Gamer 3",
+      name: "Puff Turbo",
       ram: "6GB RAM",
       cpu: "3 CPU",
       storage: "60 GB SSD/NVMe",
@@ -76,7 +76,7 @@ export default function VpsGamerPage() {
       link: plans[2]?.link || "",
     },
     {
-      name: "VPS Gamer 4",
+      name: "Puff Overdrive",
       ram: "8GB RAM",
       cpu: "4 CPU",
       storage: "70 GB SSD/NVMe",
@@ -85,7 +85,7 @@ export default function VpsGamerPage() {
       link: plans[3]?.link || "",
     },
     {
-      name: "VPS Gamer 5",
+      name: "Puff WarZone",
       ram: "12GB RAM",
       cpu: "6 CPU",
       storage: "80 GB SSD/NVMe",
@@ -94,7 +94,7 @@ export default function VpsGamerPage() {
       link: plans[4]?.link || "",
     },
     {
-      name: "VPS Gamer 6",
+      name: "Puff UltraStrike",
       ram: "16GB RAM",
       cpu: "10 CPU",
       storage: "100 GB SSD/NVMe",
@@ -103,7 +103,7 @@ export default function VpsGamerPage() {
       link: plans[5]?.link || "",
     },
     {
-      name: "VPS Gamer 7",
+      name: "Puff TitanForce",
       ram: "20GB RAM",
       cpu: "12 CPU",
       storage: "120 GB SSD/NVMe",
@@ -112,7 +112,7 @@ export default function VpsGamerPage() {
       link: plans[6]?.link || "",
     },
     {
-      name: "VPS Gamer 8",
+      name: "Puff GodMode",
       ram: "32GB RAM",
       cpu: "16 CPU",
       storage: "150 GB SSD/NVMe",
@@ -123,7 +123,7 @@ export default function VpsGamerPage() {
   ]
 
   const planDetails = {
-    "VPS Gamer 1": {
+    "Puff Start": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "40 GB SSD/NVMe",
@@ -144,7 +144,7 @@ export default function VpsGamerPage() {
         terraria: "até 16 jogadores",
       },
     },
-    "VPS Gamer 2": {
+    "Puff Core": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "50 GB SSD/NVMe",
@@ -166,7 +166,7 @@ export default function VpsGamerPage() {
         terraria: "até 32 jogadores",
       },
     },
-    "VPS Gamer 3": {
+    "Puff Turbo": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "60 GB SSD/NVMe",
@@ -189,7 +189,7 @@ export default function VpsGamerPage() {
         valheim: "até 64 jogadores",
       },
     },
-    "VPS Gamer 4": {
+    "Puff Overdrive": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "70 GB SSD/NVMe",
@@ -213,7 +213,7 @@ export default function VpsGamerPage() {
         fivem: "até 128 jogadores",
       },
     },
-    "VPS Gamer 5": {
+    "Puff WarZone": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "80 GB SSD/NVMe",
@@ -237,7 +237,7 @@ export default function VpsGamerPage() {
         fivem: "até 256 jogadores",
       },
     },
-    "VPS Gamer 6": {
+    "Puff UltraStrike": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "100 GB SSD/NVMe",
@@ -261,7 +261,7 @@ export default function VpsGamerPage() {
         fivem: "até 256 jogadores",
       },
     },
-    "VPS Gamer 7": {
+    "Puff TitanForce": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "120 GB SSD/NVMe",
@@ -285,7 +285,7 @@ export default function VpsGamerPage() {
         fivem: "até 256 jogadores",
       },
     },
-    "VPS Gamer 8": {
+    "Puff GodMode": {
       specs: {
         processor: "AMD Ryzen 9 5900X",
         storage: "150 GB SSD/NVMe",

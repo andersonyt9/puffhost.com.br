@@ -12,7 +12,7 @@ export interface Plan {
 
 export const plans: Plan[] = [
 	{
-		name: "AMD Ryzen 1",
+		name: "Puff CoreFusion",
 		price: "305,96",
 		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado",
 		description: {
@@ -23,7 +23,7 @@ export const plans: Plan[] = [
 		},
 	},
 	{
-		name: "AMD Ryzen 2",
+		name: "Puff SteelEngine",
 		price: "450,90",
 		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-2",
 		description: {
@@ -34,7 +34,7 @@ export const plans: Plan[] = [
 		},
 	},
 	{
-		name: "AMD Ryzen 3",
+		name: "Puff NitroPulse",
 		price: "593,90",
 		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-3",
 		description: {
@@ -45,7 +45,7 @@ export const plans: Plan[] = [
 		},
 	},
 	{
-		name: "AMD Ryzen 4",
+		name: "Puff IronMaster",
 		price: "669,90",
 		link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-4",
 		description: {
