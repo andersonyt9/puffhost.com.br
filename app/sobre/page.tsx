@@ -381,7 +381,7 @@ export default function SobrePage() {
           {/* Datacenter Image */}
           <div className="relative rounded-xl overflow-hidden shadow-xl">
             <img
-              src="/datacenter-infrastructure.webp"
+              src="/datacenter-infrastructure2.png"
               alt="Datacenter PuffHost com servidores de alta performance"
               className="w-full h-48 md:h-64 object-cover"
             />

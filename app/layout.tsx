@@ -104,11 +104,11 @@ export const metadata: Metadata = {
   classification: "Hospedagem Web, VPS, Servidores Dedicados",
   icons: {
     icon: [
-      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32", sizes: "32x32", type: "image/png" },
     ],
     apple: [
-      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon", sizes: "180x180", type: "image/png" },
     ],
     other: [
       {
@@ -161,7 +161,7 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="//discord.gg" />
 
         {/* Preload recursos críticos */}
-        <link rel="preload" href="/logo-branca.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/logo-branca.png" as="image" type="image/png" />
 
         {/* Meta tags para performance */}
         <meta httpEquiv="x-dns-prefetch-control" content="on" />
@@ -186,7 +186,7 @@ export default async function RootLayout({
               "@type": "Organization",
               name: "PuffHost",
               url: "https://puffhost.com.br",
-              logo: "https://puffhost.com.br/logo-branca.webp",
+              logo: "https://puffhost.com.br/logo-branca.png",
               description: "Hospedagem Premium no Brasil com VPS Gamer, Dedicados e Semi-Dedicados",
               contactPoint: {
                 "@type": "ContactPoint",

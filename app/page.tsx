@@ -496,7 +496,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-200/40 to-purple-200/40 rounded-2xl blur-2xl animate-pulse" />
                 <img
-                  src="/datacenter-infrastructure.webp"
+                  src="/datacenter-infrastructure1.png"
                   alt="Infraestrutura Avançada - Datacenter Moderno"
                   className="relative z-10 w-full h-auto max-w-sm hover:scale-105 transition-transform duration-300 rounded-xl shadow-lg"
                 />
