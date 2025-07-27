@@ -378,21 +378,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="container mx-auto px-4">
-    <div className="flex justify-center lg:justify-end">
-      <div className="relative">
-        {/* Glow animado no fundo da imagem */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-300/30 to-purple-300/30 rounded-3xl blur-2xl animate-pulse" />
-
-        {/* Imagem com animação e hover */}
-        <img
-          src="/svgs/Server-rafiki.svg"
-          alt="Servidores de Alta Performance"
-          className="relative z-10 w-full h-auto max-w-md animate-bounce hover:scale-105 transition-transform duration-300"
-        />
-      </div>
-    </div>
-  </div>
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-300/30 to-purple-300/30 rounded-3xl blur-2xl animate-pulse" />
+                <img
+                  src="/svgs/Server-rafiki.svg"
+                  alt="Servidores de Alta Performance"
+                  className="relative z-10 w-full h-auto max-w-md animate-bounce-y hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
