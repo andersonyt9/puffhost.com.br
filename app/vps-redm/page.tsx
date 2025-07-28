@@ -58,7 +58,7 @@ export default function VpsRedmPage() {
       },
       features: {
         protection: "Anti-DDoS",
-        setup: "Servidor limpo (Ubuntu/CentOS)",
+        setup: "Servidor limpo (windows/Ubuntu/CentOS)",
         access: "Acesso root completo",
         panel: "Painel de controle básico",
         support: "Suporte técnico 24/7",
@@ -81,7 +81,7 @@ export default function VpsRedmPage() {
       },
       features: {
         protection: "Anti-DDoS básico",
-        setup: "Servidor limpo (Ubuntu/CentOS)",
+        setup: "Servidor limpo (windows/Ubuntu/CentOS)",
         access: "Acesso root completo",
         panel: "Painel de controle básico",
         support: "Suporte técnico 24/7",
@@ -105,7 +105,7 @@ export default function VpsRedmPage() {
       },
       features: {
         protection: "Anti-DDoS",
-        setup: "Servidor limpo (Ubuntu/CentOS)",
+        setup: "Servidor limpo (windows/Ubuntu/CentOS)",
         access: "Acesso root completo",
         panel: "Painel de controle básico",
         support: "Suporte técnico 24/7",
@@ -130,7 +130,7 @@ export default function VpsRedmPage() {
       },
       features: {
         protection: "Anti-DDoS",
-        setup: "Servidor limpo (Ubuntu/CentOS)",
+        setup: "Servidor limpo (windows/Ubuntu/CentOS)",
         access: "Acesso root completo",
         panel: "Painel de controle básico",
         support: "Suporte técnico 24/7",
@@ -156,7 +156,7 @@ export default function VpsRedmPage() {
       },
       features: {
         protection: "Anti-DDoS",
-        setup: "Servidor limpo (Ubuntu/CentOS)",
+        setup: "Servidor limpo (windows/Ubuntu/CentOS)",
         access: "Acesso root completo",
         panel: "Painel de controle básico",
         support: "Suporte técnico 24/7",
