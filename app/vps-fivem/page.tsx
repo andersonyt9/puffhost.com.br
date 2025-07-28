@@ -53,7 +53,7 @@ export default function VpsFiveMPage() {
     {
       name: "Puff FiveStart",
       ram: "2GB RAM",
-      cpu: "3 vCPU",
+      cpu: "2 vCPU",
       storage: "45GB SSD NVMe",
       slots: "32 jogadores",
       price: "87,90",

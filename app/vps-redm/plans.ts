@@ -13,7 +13,7 @@ export const redmPlans: VpsRedmPlan[] = [
   {
     name: "Puff PioneerNode",
     ram: "2GB RAM",
-    cpu: "3 vCPU",
+    cpu: "2 vCPU",
     storage: "45GB SSD",
     price: "87,90",
     popular: false,
