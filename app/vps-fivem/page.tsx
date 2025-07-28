@@ -56,7 +56,7 @@ export default function VpsFiveMPage() {
       cpu: "3 vCPU",
       storage: "45GB SSD NVMe",
       slots: "32 jogadores",
-      price: "83,90",
+      price: "87,90",
       popular: false,
       link: plans[0]?.link || "",
     },
@@ -66,8 +66,8 @@ export default function VpsFiveMPage() {
       cpu: "3 vCPU",
       storage: "50GB SSD NVMe",
       slots: "64 jogadores",
-      price: "125,90",
-      popular: false,
+      price: "127,90",
+      popular: true,
       link: plans[1]?.link || "",
     },
     {
@@ -77,7 +77,7 @@ export default function VpsFiveMPage() {
       storage: "60GB SSD NVMe",
       slots: "128 jogadores",
       price: "197,90",
-      popular: true,
+      popular: false,
       link: plans[2]?.link || "",
     },
     {

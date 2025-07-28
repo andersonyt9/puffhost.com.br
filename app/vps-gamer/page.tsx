@@ -63,7 +63,7 @@ export default function VpsGamerPage() {
       cpu: "2 CPU",
       storage: "50 GB SSD/NVMe",
       price: "90,90",
-      popular: false,
+      popular: true,
       link: plans[1]?.link || "",
     },
     {
@@ -72,7 +72,7 @@ export default function VpsGamerPage() {
       cpu: "3 CPU",
       storage: "60 GB SSD/NVMe",
       price: "118,90",
-      popular: true,
+      popular: false,
       link: plans[2]?.link || "",
     },
     {
