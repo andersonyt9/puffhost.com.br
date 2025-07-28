@@ -13,7 +13,7 @@ export const redmPlans: VpsRedmPlan[] = [
   {
     name: "Puff PioneerNode",
     ram: "2GB RAM",
-    cpu: "2 vCPU",
+    cpu: "3 vCPU",
     storage: "45GB SSD",
     price: "83,90",
     popular: false,
@@ -23,7 +23,7 @@ export const redmPlans: VpsRedmPlan[] = [
   {
     name: "Puff OutlawCore",
     ram: "4GB RAM",
-    cpu: "2 vCPU",
+    cpu: "3 vCPU",
     storage: "50GB SSD",
     price: "125,90",
     popular: false,
@@ -33,7 +33,7 @@ export const redmPlans: VpsRedmPlan[] = [
   {
     name: "Puff SheriffHost",
     ram: "6GB RAM",
-    cpu: "3 vCPU",
+    cpu: "4 vCPU",
     storage: "60GB SSD",
     price: "197,90",
     popular: true,
@@ -43,7 +43,7 @@ export const redmPlans: VpsRedmPlan[] = [
   {
     name: "Puff DesertEngine",
     ram: "8GB RAM",
-    cpu: "4 vCPU",
+    cpu: "5 vCPU",
     storage: "70GB SSD",
     price: "245,90",
     popular: false,

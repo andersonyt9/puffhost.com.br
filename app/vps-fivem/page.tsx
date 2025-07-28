@@ -53,7 +53,7 @@ export default function VpsFiveMPage() {
     {
       name: "Puff FiveStart",
       ram: "2GB RAM",
-      cpu: "2 vCPU",
+      cpu: "3 vCPU",
       storage: "45GB SSD NVMe",
       slots: "32 jogadores",
       price: "83,90",
@@ -63,7 +63,7 @@ export default function VpsFiveMPage() {
     {
       name: "Puff FiveCore",
       ram: "4GB RAM",
-      cpu: "2 vCPU",
+      cpu: "3 vCPU",
       storage: "50GB SSD NVMe",
       slots: "64 jogadores",
       price: "125,90",
@@ -73,7 +73,7 @@ export default function VpsFiveMPage() {
     {
       name: "Puff FiveForce",
       ram: "6GB RAM",
-      cpu: "3 vCPU",
+      cpu: "4 vCPU",
       storage: "60GB SSD NVMe",
       slots: "128 jogadores",
       price: "197,90",
@@ -83,7 +83,7 @@ export default function VpsFiveMPage() {
     {
       name: "Puff FivePower",
       ram: "8GB RAM",
-      cpu: "4 vCPU",
+      cpu: "5 vCPU",
       storage: "70GB SSD NVMe",
       slots: "200 jogadores",
       price: "245,90",
