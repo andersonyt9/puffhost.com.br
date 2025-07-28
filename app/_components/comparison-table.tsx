@@ -52,8 +52,8 @@ export default function ComparisonTable() {
 const specifications = [
 	{
 		label: "RAM",
-		gamer: "DDR4 3200 Mhz",
-		intel: "DDR4/DDR3 2400/1600 Mhz",
+		gamer: "DDR5 3200 Mhz",
+		intel: "DDR5/DDR3 2400/1600 Mhz",
 	},
 	{
 		label: "CPU",

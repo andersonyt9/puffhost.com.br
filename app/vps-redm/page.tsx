@@ -50,9 +50,9 @@ export default function VpsRedmPage() {
   const planDetails = {
     "Puff PioneerNode": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "45GB SSD NVMe",
-        memory: "2GB RAM DDR4",
+        memory: "2GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "Brasil (São Paulo)",
       },
@@ -73,9 +73,9 @@ export default function VpsRedmPage() {
     },
     "Puff OutlawCore": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "50GB SSD NVMe",
-        memory: "4GB RAM DDR4",
+        memory: "4GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "Brasil (São Paulo)",
       },
@@ -97,9 +97,9 @@ export default function VpsRedmPage() {
     },
     "Puff SheriffHost": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "60GB SSD NVMe",
-        memory: "6GB RAM DDR4",
+        memory: "6GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "Brasil (São Paulo)",
       },
@@ -122,9 +122,9 @@ export default function VpsRedmPage() {
     },
     "Puff DesertEngine": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "70GB SSD NVMe",
-        memory: "8GB RAM DDR4",
+        memory: "8GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "Brasil (São Paulo)",
       },
@@ -148,9 +148,9 @@ export default function VpsRedmPage() {
     },
     "Puff LegendaryWest": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "80GB SSD NVMe",
-        memory: "10GB RAM DDR4",
+        memory: "10GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "Brasil (São Paulo)",
       },

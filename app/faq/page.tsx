@@ -264,7 +264,7 @@ const faqs = [
     category: "tecnico",
     question: "Qual hardware vocês utilizam?",
     answer:
-      "Utilizamos processadores AMD Ryzen de última geração, SSD NVMe para máxima velocidade, RAM DDR4 e rede 10Gbps. Todo hardware é enterprise grade.",
+      "Utilizamos processadores AMD Ryzen de última geração, SSD NVMe para máxima velocidade, RAM DDR5 e rede 10Gbps. Todo hardware é enterprise grade.",
   },
   {
     category: "tecnico",

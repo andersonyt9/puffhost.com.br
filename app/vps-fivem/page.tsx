@@ -105,9 +105,9 @@ export default function VpsFiveMPage() {
   const planDetails = {
     "Puff FiveStart": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "45GB SSD NVMe",
-        memory: "2GB RAM DDR4",
+        memory: "2GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "São Paulo, Brasil",
       },
@@ -128,9 +128,9 @@ export default function VpsFiveMPage() {
     },
     "Puff FiveCore": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "50GB SSD NVMe",
-        memory: "4GB RAM DDR4",
+        memory: "4GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "São Paulo, Brasil",
       },
@@ -152,9 +152,9 @@ export default function VpsFiveMPage() {
     },
     "Puff FiveForce": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "60GB SSD NVMe",
-        memory: "6GB RAM DDR4",
+        memory: "6GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "São Paulo, Brasil",
       },
@@ -177,9 +177,9 @@ export default function VpsFiveMPage() {
     },
     "Puff FivePower": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "70GB SSD NVMe",
-        memory: "8GB RAM DDR4",
+        memory: "8GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "São Paulo, Brasil",
       },
@@ -203,9 +203,9 @@ export default function VpsFiveMPage() {
     },
     "Puff FiveElite": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "80GB SSD NVMe",
-        memory: "10GB RAM DDR4",
+        memory: "10GB RAM DDR5",
         network: "10Gbps dedicado",
         location: "São Paulo, Brasil",
       },
@@ -266,7 +266,7 @@ export default function VpsFiveMPage() {
       id: "performance-optimization",
       question: "Como é a performance para roleplay intenso?",
       answer:
-        "Nossos servidores utilizam processadores AMD Ryzen 9 5900X e SSD NVMe para garantir excelente performance. A latência é inferior a 15ms para jogadores brasileiros. No entanto, a performance final do seu servidor FiveM dependerá de como você configura os scripts, otimizações que implementa e recursos que utiliza.",
+        "Nossos servidores utilizam processadores AMD Ryzen 9 9900X e SSD NVMe para garantir excelente performance. A latência é inferior a 15ms para jogadores brasileiros. No entanto, a performance final do seu servidor FiveM dependerá de como você configura os scripts, otimizações que implementa e recursos que utiliza.",
     },
   ]
 
@@ -632,13 +632,13 @@ export default function VpsFiveMPage() {
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Hardware Dedicado</h3>
               <p className="text-gray-700 mb-4 leading-relaxed text-sm">
-                Processadores AMD Ryzen 9 5900X e SSD NVMe para máxima performance. Recursos dedicados que garantem
+                Processadores AMD Ryzen 9 9900X e SSD NVMe para máxima performance. Recursos dedicados que garantem
                 estabilidade mesmo com muitos jogadores conectados.
               </p>
               <div className="space-y-2">
                 <div className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-pink-500 mr-2 flex-shrink-0" />
-                  AMD Ryzen 9 5900X
+                  AMD Ryzen 9 9900X
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-4 h-4 text-pink-500 mr-2 flex-shrink-0" />

@@ -11,7 +11,7 @@ export const dedicadoPlans = [
     link: "https://discord.gg/qN8pH33jdh",
     specs: [
       { icon: "Cpu", label: "6 Núcleos", value: "12 Threads" },
-      { icon: "MemoryStick", label: "64GB RAM", value: "DDR4" },
+      { icon: "MemoryStick", label: "64GB RAM", value: "DDR5" },
       { icon: "HardDrive", label: "1TB NVMe", value: "Gen4 SSD" },
       { icon: "Network", label: "1Gbps", value: "Uplink" },
       { icon: "ArrowUpFromDot", label: "20TB", value: "Tráfego" },
@@ -47,7 +47,7 @@ export const dedicadoPlans = [
     link: "https://discord.gg/qN8pH33jdh",
     specs: [
       { icon: "Cpu", label: "8 Núcleos", value: "16 Threads" },
-      { icon: "MemoryStick", label: "128GB RAM", value: "DDR4" },
+      { icon: "MemoryStick", label: "128GB RAM", value: "DDR5" },
       { icon: "HardDrive", label: "2TB NVMe", value: "Gen4 SSD" },
       { icon: "Network", label: "1Gbps", value: "Uplink" },
       { icon: "ArrowUpFromDot", label: "20TB", value: "Tráfego" },
@@ -85,7 +85,7 @@ export const dedicadoPlans = [
     link: "https://discord.gg/qN8pH33jdh",
     specs: [
       { icon: "Cpu", label: "12 Núcleos", value: "24 Threads" },
-      { icon: "MemoryStick", label: "128GB RAM", value: "DDR4" },
+      { icon: "MemoryStick", label: "128GB RAM", value: "DDR5" },
       { icon: "HardDrive", label: "2TB NVMe", value: "Gen4 SSD" },
       { icon: "Network", label: "1Gbps", value: "Uplink" },
       { icon: "ArrowUpFromDot", label: "40TB", value: "Tráfego" },

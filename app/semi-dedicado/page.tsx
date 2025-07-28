@@ -95,9 +95,9 @@ export default function SemiDedicadoPage() {
   const planDetails = {
     "Puff CoreFusion": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "100 GB SSD NVMe Gen4",
-        memory: "16GB RAM DDR4",
+        memory: "16GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -118,9 +118,9 @@ export default function SemiDedicadoPage() {
     },
     "Puff SteelEngine": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "250 GB SSD NVMe Gen4",
-        memory: "24GB RAM DDR4",
+        memory: "24GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -141,9 +141,9 @@ export default function SemiDedicadoPage() {
     },
     "Puff NitroPulse": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "250 GB SSD NVMe Gen4",
-        memory: "32GB RAM DDR4",
+        memory: "32GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -164,9 +164,9 @@ export default function SemiDedicadoPage() {
     },
     "Puff IronMaster": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "350 GB SSD NVMe Gen4",
-        memory: "64GB RAM DDR4",
+        memory: "64GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -205,7 +205,7 @@ export default function SemiDedicadoPage() {
       id: "performance",
       question: "Qual a performance esperada dos processadores AMD Ryzen?",
       answer:
-        "Utilizamos processadores AMD Ryzen 9 5900X de última geração, com arquitetura Zen 3, oferecendo até 4.8GHz de clock boost e cache L3 de 64MB. Isso garante performance excepcional para aplicações que exigem alto processamento, como bancos de dados, e-commerce e sistemas empresariais.",
+        "Utilizamos processadores AMD Ryzen 9 9900X de última geração, com arquitetura Zen 3, oferecendo até 4.8GHz de clock boost e cache L3 de 64MB. Isso garante performance excepcional para aplicações que exigem alto processamento, como bancos de dados, e-commerce e sistemas empresariais.",
     },
     {
       id: "backup",
@@ -275,7 +275,7 @@ export default function SemiDedicadoPage() {
               <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">
                 recursos dedicados exclusivos
               </span>
-              , <span className="text-purple-600 font-bold bg-purple-100 px-2 py-1 rounded-lg">AMD Ryzen 9 5900X</span>{" "}
+              , <span className="text-purple-600 font-bold bg-purple-100 px-2 py-1 rounded-lg">AMD Ryzen 9 9900X</span>{" "}
               e{" "}
               <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">suporte empresarial 24/7</span>
             </p>
@@ -390,7 +390,7 @@ export default function SemiDedicadoPage() {
                   ambiente virtualizado mas com recursos físicos garantidos.
                 </p>
                 <p className="leading-relaxed text-pink-600 font-semibold bg-pink-50 p-3 rounded-lg">
-                  💡 Com processadores AMD Ryzen 9 5900X e SSD NVMe Gen4, garantimos performance excepcional para suas
+                  💡 Com processadores AMD Ryzen 9 9900X e SSD NVMe Gen4, garantimos performance excepcional para suas
                   aplicações mais exigentes.
                 </p>
               </div>
@@ -409,7 +409,7 @@ export default function SemiDedicadoPage() {
                   <MemoryStick className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-sm mb-1">RAM Garantida</h3>
-                <p className="text-xs text-gray-600">Memória DDR4 exclusiva</p>
+                <p className="text-xs text-gray-600">Memória DDR5 exclusiva</p>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
                 <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-3">
@@ -703,7 +703,7 @@ export default function SemiDedicadoPage() {
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-3 h-3 text-pink-500 mr-2 flex-shrink-0" />
-                  RAM DDR4 garantida
+                  RAM DDR5 garantida
                 </div>
                 <div className="flex items-center text-sm text-gray-600">
                   <CheckCircle className="w-3 h-3 text-pink-500 mr-2 flex-shrink-0" />

@@ -56,7 +56,7 @@ const plans = [
     ],
     specs: {
       cpu: "AMD Ryzen 9",
-      ram: "4GB DDR4",
+      ram: "4GB DDR5",
       storage: "60GB NVMe",
       bandwidth: "1Gbps",
     },
@@ -79,7 +79,7 @@ const plans = [
     ],
     specs: {
       cpu: "AMD Ryzen 9",
-      ram: "2GB DDR4",
+      ram: "2GB DDR5",
       storage: "40GB NVMe",
       bandwidth: "1Gbps",
     },
@@ -103,7 +103,7 @@ const plans = [
     ],
     specs: {
       cpu: "AMD Ryzen 9",
-      ram: "16GB DDR4",
+      ram: "16GB DDR5",
       storage: "100GB NVMe",
       bandwidth: "1Gbps",
     },
@@ -127,7 +127,7 @@ const plans = [
     ],
     specs: {
       cpu: "AMD Ryzen 9",
-      ram: "64GB DDR4",
+      ram: "64GB DDR5",
       storage: "1TB NVMe",
       bandwidth: "1Gbps",
     },

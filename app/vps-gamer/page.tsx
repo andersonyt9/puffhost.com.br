@@ -125,9 +125,9 @@ export default function VpsGamerPage() {
   const planDetails = {
     "Puff Start": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "40 GB SSD/NVMe",
-        memory: "2GB RAM DDR4",
+        memory: "2GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -146,9 +146,9 @@ export default function VpsGamerPage() {
     },
     "Puff Core": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "50 GB SSD/NVMe",
-        memory: "4GB RAM DDR4",
+        memory: "4GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -168,9 +168,9 @@ export default function VpsGamerPage() {
     },
     "Puff Turbo": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "60 GB SSD/NVMe",
-        memory: "6GB RAM DDR4",
+        memory: "6GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -191,9 +191,9 @@ export default function VpsGamerPage() {
     },
     "Puff Overdrive": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "70 GB SSD/NVMe",
-        memory: "8GB RAM DDR4",
+        memory: "8GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -215,9 +215,9 @@ export default function VpsGamerPage() {
     },
     "Puff WarZone": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "80 GB SSD/NVMe",
-        memory: "12GB RAM DDR4",
+        memory: "12GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -239,9 +239,9 @@ export default function VpsGamerPage() {
     },
     "Puff UltraStrike": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "100 GB SSD/NVMe",
-        memory: "16GB RAM DDR4",
+        memory: "16GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -263,9 +263,9 @@ export default function VpsGamerPage() {
     },
     "Puff TitanForce": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "120 GB SSD/NVMe",
-        memory: "20GB RAM DDR4",
+        memory: "20GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -287,9 +287,9 @@ export default function VpsGamerPage() {
     },
     "Puff GodMode": {
       specs: {
-        processor: "AMD Ryzen 9 5900X",
+        processor: "AMD Ryzen 9 9900X",
         storage: "150 GB SSD/NVMe",
-        memory: "32GB RAM DDR4",
+        memory: "32GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
         location: "Brasil (São Paulo)",
       },
@@ -317,7 +317,7 @@ export default function VpsGamerPage() {
       id: "latencia",
       question: "Qual é a latência média dos servidores VPS Gamer?",
       answer:
-        "Nossos servidores VPS Gamer possuem latência média de 15-30ms para as principais regiões do Brasil. Utilizamos infraestrutura com processadores AMD Ryzen 9 5900X e rotas otimizadas para garantir boa experiência em jogos online.",
+        "Nossos servidores VPS Gamer possuem latência média de 15-30ms para as principais regiões do Brasil. Utilizamos infraestrutura com processadores AMD Ryzen 9 9900X e rotas otimizadas para garantir boa experiência em jogos online.",
     },
     {
       id: "ddos",

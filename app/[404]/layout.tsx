@@ -50,14 +50,14 @@ export const metadata: Metadata = {
 			"Hospedagem de alto desempenho, com baixa latência, infraestrutura no Brasil, armazenamento NVMe e proteção anti-DDoS para jogos como Minecraft, FiveM e muito mais.",
 		url: "https://puffhost.com.br/",
 		siteName: "PuffHost",
-		images: ["/banner.png"],
+		images: ["https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/banner.png"],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Hospedagem de Jogos no Brasil | PuffHost",
 		description:
 			"Desempenho superior e segurança com infraestrutura no Brasil. Hospede seus servidores de Minecraft, FiveM e outros jogos com proteção Anti DDoS.",
-		images: ["/banner.png"],
+		images: ["https://r2.fivemanage.com/X4uI1At8rCEGmVplwtsjG/banner.png"],
 	},
 	icons: {
 		icon: "/favicon-32x32.png",
