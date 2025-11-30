@@ -71,7 +71,7 @@ const plans = [
     popular: true,
     badge: "Mais Popular",
     features: [
-      "Anti-DDoS PRO 348TB/s",
+      "Anti-DDoS PRO 449TB/s",
       "Processador AMD Ryzen 9",
       "Latência ultra baixa < 15ms",
       "Suporte técnico 24/7",
@@ -148,7 +148,7 @@ const stats = [
     description: "Equipe especializada sempre disponível",
   },
   {
-    number: "348TB/s",
+    number: "449TB/s",
     label: "Proteção DDoS",
     icon: <ShieldIcon className="w-4 h-4" />,
     description: "Proteção premium contra ataques",
@@ -196,7 +196,7 @@ const technologies = [
     description: "Processadores de última geração",
   },
   { name: "NVMe SSD", icon: <Database className="w-6 h-6 text-pink-500" />, description: "Armazenamento ultra-rápido" },
-  { name: "Anti-DDoS", icon: <Shield className="w-6 h-6 text-pink-500" />, description: "Proteção premium 348TB/s" },
+  { name: "Anti-DDoS", icon: <Shield className="w-6 h-6 text-pink-500" />, description: "Proteção premium 449TB/s" },
   {
     name: "Rede 10Gbps",
     icon: <Wifi className="w-6 h-6 text-pink-500" />,

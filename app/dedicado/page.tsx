@@ -104,7 +104,7 @@ export default function Dedicados() {
               </div>
               <div className="flex items-center gap-2 bg-white/80 rounded-full px-4 py-2 border border-gray-200 backdrop-blur-sm shadow-sm">
                 <Shield className="w-4 h-4 text-blue-600" />
-                <span className="text-sm font-medium text-gray-800">Proteção DDoS 348TB/s</span>
+                <span className="text-sm font-medium text-gray-800">Proteção DDoS 449TB/s</span>
               </div>
               <div className="flex items-center gap-2 bg-white/80 rounded-full px-4 py-2 border border-gray-200 backdrop-blur-sm shadow-sm">
                 <Gauge className="w-4 h-4 text-green-600" />
@@ -318,7 +318,7 @@ export default function Dedicados() {
               {
                 icon: <Shield className="w-8 h-8" />,
                 title: "Proteção Máxima",
-                description: "348TB/s de proteção DDoS e firewall avançado para máxima segurança",
+                description: "449TB/s de proteção DDoS e firewall avançado para máxima segurança",
                 color: "from-blue-500 to-cyan-500",
               },
               {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "Hospedagem Premium no Brasil com desempenho extremo — VPS Gamer, Semi-Dedicados e Dedicados equipados com AMD Ryzen, SSD NVMe ultrarrápido e proteção Anti-DDoS de até 348Tb/s. Suporte 24/7 especializado para projetos de games, streaming e empresas.",
+    "Hospedagem Premium no Brasil com desempenho extremo — VPS Gamer, Semi-Dedicados e Dedicados equipados com AMD Ryzen, SSD NVMe ultrarrápido e proteção Anti-DDoS de até 449Tb/s. Suporte 24/7 especializado para projetos de games, streaming e empresas.",
   keywords: [
     "NeonHost",
     "BrasilFivemHost",
@@ -517,7 +517,7 @@ export const metadata: Metadata = {
     url: "https://puffhost.com.br",
     title: "PuffHost — Hospedagem Premium no Brasil com foco em VPS, Dedicados e Servidores Gamer",
     description:
-      "Hospedagem de Alta Performance no Brasil — VPS Gamer, Semi-Dedicados e Dedicados com AMD Ryzen, SSD NVMe, proteção Anti-DDoS de até 348Tb/s e suporte 24/7 especializado.",
+      "Hospedagem de Alta Performance no Brasil — VPS Gamer, Semi-Dedicados e Dedicados com AMD Ryzen, SSD NVMe, proteção Anti-DDoS de até 449Tb/s e suporte 24/7 especializado.",
     siteName: "PuffHost",
     images: [
       {

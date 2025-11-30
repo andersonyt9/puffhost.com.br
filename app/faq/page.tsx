@@ -148,7 +148,7 @@ const faqs = [
     category: "gaming",
     question: "Como funciona a proteção anti-DDoS para jogos?",
     answer:
-      "Oferecemos proteção DDoS premium de 348TB/s específica para gaming, com filtragem inteligente que não afeta a latência dos jogos. Proteção ativa 24/7 sem configuração necessária.",
+      "Oferecemos proteção DDoS premium de 449TB/s específica para gaming, com filtragem inteligente que não afeta a latência dos jogos. Proteção ativa 24/7 sem configuração necessária.",
   },
   {
     category: "gaming",
@@ -232,7 +232,7 @@ const faqs = [
     category: "seguranca",
     question: "Como funciona a proteção DDoS?",
     answer:
-      "Utilizamos proteção DDoS premium de 348TB/s com filtragem em tempo real. A proteção é automática e transparente, bloqueando ataques sem afetar o tráfego legítimo.",
+      "Utilizamos proteção DDoS premium de 449TB/s com filtragem em tempo real. A proteção é automática e transparente, bloqueando ataques sem afetar o tráfego legítimo.",
   },
   {
     category: "seguranca",

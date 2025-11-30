@@ -15,7 +15,7 @@ export const dedicadoPlans = [
       { icon: "HardDrive", label: "1TB NVMe", value: "Gen4 SSD" },
       { icon: "Network", label: "1Gbps", value: "Uplink" },
       { icon: "ArrowUpFromDot", label: "20TB", value: "Tráfego" },
-      { icon: "Shield", label: "DDoS", value: "348TB/s" },
+      { icon: "Shield", label: "DDoS", value: "449TB/s" },
     ],
     recursos: [
       "Hardware 100% dedicado",
@@ -51,7 +51,7 @@ export const dedicadoPlans = [
       { icon: "HardDrive", label: "2TB NVMe", value: "Gen4 SSD" },
       { icon: "Network", label: "1Gbps", value: "Uplink" },
       { icon: "ArrowUpFromDot", label: "20TB", value: "Tráfego" },
-      { icon: "Shield", label: "DDoS", value: "348TB/s" },
+      { icon: "Shield", label: "DDoS", value: "449TB/s" },
     ],
     recursos: [
       "Hardware 100% dedicado",
@@ -89,7 +89,7 @@ export const dedicadoPlans = [
       { icon: "HardDrive", label: "2TB NVMe", value: "Gen4 SSD" },
       { icon: "Network", label: "1Gbps", value: "Uplink" },
       { icon: "ArrowUpFromDot", label: "40TB", value: "Tráfego" },
-      { icon: "Shield", label: "DDoS", value: "348TB/s" },
+      { icon: "Shield", label: "DDoS", value: "449TB/s" },
     ],
     recursos: [
       "Hardware 100% dedicado",

@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "VPS Gamer - Servidores para Jogos | PuffHost",
   description:
-    "VPS Gamer otimizado para Minecraft, FiveM, Rust, CS2 e outros jogos. AMD Ryzen, Anti-DDoS 348TB/s, latência <5ms e suporte 24/7. A partir de R$ 29,90/mês.",
+    "VPS Gamer otimizado para Minecraft, FiveM, Rust, CS2 e outros jogos. AMD Ryzen, Anti-DDoS 449TB/s, latência <5ms e suporte 24/7. A partir de R$ 29,90/mês.",
   keywords: [
     "NeonHost",
     "BrasilFivemHost",
