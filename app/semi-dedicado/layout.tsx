@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Servidores Semi-Dedicados - Recursos Garantidos | PuffHost",
   description:
-    "Servidores Semi-Dedicados com recursos 100% dedicados, AMD Ryzen 9 9900X, até 64GB RAM e SSD NVMe. Performance empresarial garantida.",
+    "Servidores Semi-Dedicados com recursos 100% dedicados, AMD Ryzen 9, até 64GB RAM e SSD NVMe. Performance empresarial garantida.",
   keywords: [
     "NeonHost",
     "BrasilFivemHost",

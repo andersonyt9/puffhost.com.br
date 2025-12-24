@@ -95,7 +95,7 @@ export default function SemiDedicadoPage() {
   const planDetails = {
     "Puff CoreFusion": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "100 GB SSD NVMe Gen4",
         memory: "16GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
@@ -118,7 +118,7 @@ export default function SemiDedicadoPage() {
     },
     "Puff SteelEngine": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "250 GB SSD NVMe Gen4",
         memory: "24GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
@@ -141,7 +141,7 @@ export default function SemiDedicadoPage() {
     },
     "Puff NitroPulse": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "250 GB SSD NVMe Gen4",
         memory: "32GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
@@ -164,7 +164,7 @@ export default function SemiDedicadoPage() {
     },
     "Puff IronMaster": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "350 GB SSD NVMe Gen4",
         memory: "64GB RAM DDR5",
         network: "Link dedicado de 1Gbps",
@@ -205,7 +205,7 @@ export default function SemiDedicadoPage() {
       id: "performance",
       question: "Qual a performance esperada dos processadores AMD Ryzen?",
       answer:
-        "Utilizamos processadores AMD Ryzen 9 9900X de última geração, com arquitetura Zen 3, oferecendo até 4.8GHz de clock boost e cache L3 de 64MB. Isso garante performance excepcional para aplicações que exigem alto processamento, como bancos de dados, e-commerce e sistemas empresariais.",
+        "Utilizamos processadores AMD Ryzen 9 de última geração, com arquitetura Zen 3, oferecendo até 4.8GHz de clock boost e cache L3 de 64MB. Isso garante performance excepcional para aplicações que exigem alto processamento, como bancos de dados, e-commerce e sistemas empresariais.",
     },
     {
       id: "backup",
@@ -275,7 +275,7 @@ export default function SemiDedicadoPage() {
               <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">
                 recursos dedicados exclusivos
               </span>
-              , <span className="text-purple-600 font-bold bg-purple-100 px-2 py-1 rounded-lg">AMD Ryzen 9 9900X</span>{" "}
+              , <span className="text-purple-600 font-bold bg-purple-100 px-2 py-1 rounded-lg">AMD Ryzen 9</span>{" "}
               e{" "}
               <span className="text-pink-600 font-bold bg-pink-100 px-2 py-1 rounded-lg">suporte empresarial 24/7</span>
             </p>
@@ -390,7 +390,7 @@ export default function SemiDedicadoPage() {
                   ambiente virtualizado mas com recursos físicos garantidos.
                 </p>
                 <p className="leading-relaxed text-pink-600 font-semibold bg-pink-50 p-3 rounded-lg">
-                  💡 Com processadores AMD Ryzen 9 9900X e SSD NVMe Gen4, garantimos performance excepcional para suas
+                  💡 Com processadores AMD Ryzen 9 e SSD NVMe Gen4, garantimos performance excepcional para suas
                   aplicações mais exigentes.
                 </p>
               </div>

@@ -103,7 +103,7 @@ export default function VpsStreamingPage() {
   const planDetails = {
     "Puff StreamLite": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "60GB SSD NVMe",
         memory: "4GB RAM DDR5",
         network: "1Gbps dedicado",
@@ -126,7 +126,7 @@ export default function VpsStreamingPage() {
     },
     "Puff StreamFlow": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "80GB SSD NVMe",
         memory: "6GB RAM DDR5",
         network: "1Gbps dedicado",
@@ -150,7 +150,7 @@ export default function VpsStreamingPage() {
     },
     "Puff StreamBoost": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "120GB SSD NVMe",
         memory: "8GB RAM DDR5",
         network: "1Gbps dedicado",
@@ -175,7 +175,7 @@ export default function VpsStreamingPage() {
     },
     "Puff StreamPro": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "160GB SSD NVMe",
         memory: "12GB RAM DDR5",
         network: "1Gbps dedicado",
@@ -201,7 +201,7 @@ export default function VpsStreamingPage() {
     },
     "Puff StreamXtreme": {
       specs: {
-        processor: "AMD Ryzen 9 9900X",
+        processor: "AMD Ryzen 9",
         storage: "240GB SSD NVMe",
         memory: "16GB RAM DDR5",
         network: "1Gbps dedicado",
