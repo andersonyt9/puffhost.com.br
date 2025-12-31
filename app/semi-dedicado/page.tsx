@@ -57,7 +57,7 @@ export default function SemiDedicadoPage() {
     {
       name: "Puff CoreFusion",
       ram: "16GB RAM",
-      cpu: "8 núcleos",
+      cpu: "7 núcleos",
       storage: "100 GB SSD NVMe",
       price: "305,96",
       popular: false,
@@ -66,8 +66,8 @@ export default function SemiDedicadoPage() {
     {
       name: "Puff SteelEngine",
       ram: "24GB RAM",
-      cpu: "8 núcleos",
-      storage: "250 GB SSD NVMe",
+      cpu: "10 núcleos",
+      storage: "150 GB SSD NVMe",
       price: "450,90",
       popular: true,
       link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-2",
@@ -75,8 +75,8 @@ export default function SemiDedicadoPage() {
     {
       name: "Puff NitroPulse",
       ram: "32GB RAM",
-      cpu: "9 núcleos",
-      storage: "250 GB SSD NVMe",
+      cpu: "12 núcleos",
+      storage: "200 GB SSD NVMe",
       price: "593,90",
       popular: false,
       link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-3",
@@ -84,8 +84,8 @@ export default function SemiDedicadoPage() {
     {
       name: "Puff IronMaster",
       ram: "64GB RAM",
-      cpu: "9 núcleos",
-      storage: "350 GB SSD NVMe",
+      cpu: "16 núcleos",
+      storage: "320 GB SSD NVMe",
       price: "669,90",
       popular: false,
       link: "https://app.puffhost.com.br/index.php?rp=/store/semi-dedicado/semi-dedicado-4",
